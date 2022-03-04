@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QRSCS_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Behavioral_Observation_AnsLOV">
+    <Key>
+      <PropertyRef Name="Behavioral_Observation_AnsID" />
+    </Key>
+    <Property Name="Behavioral_Observation_AnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Behavioral_Observation_AnsType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Behavioral_Observation_Answer" Relationship="Self.FK__Behaviora__Behav__628FA481" FromRole="Behavioral_Observation_AnsLOV" ToRole="Behavioral_Observation_Answer" />
+  </EntityType>
+  <EntityType Name="Behavioral_Observation_Answer">
+    <Key>
+      <PropertyRef Name="Behavioral_Observation_Answer_SRNO" />
+    </Key>
+    <Property Name="Behavioral_Observation_Answer_SRNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Behavioral_Observation_AnsID" Type="Int32" Nullable="false" />
+    <Property Name="Behavioral_Observation_ValuesID" Type="Int32" Nullable="false" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="User_Answer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Behavioral_Observation_AnsLOV" Relationship="Self.FK__Behaviora__Behav__628FA481" FromRole="Behavioral_Observation_Answer" ToRole="Behavioral_Observation_AnsLOV" />
+    <NavigationProperty Name="Behavioral_Observation_LOV" Relationship="Self.FK__Behaviora__Behav__6383C8BA" FromRole="Behavioral_Observation_Answer" ToRole="Behavioral_Observation_LOV" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Behaviora__CaseH__6477ECF3" FromRole="Behavioral_Observation_Answer" ToRole="Case_History" />
+  </EntityType>
+  <EntityType Name="Behavioral_Observation_LOV">
+    <Key>
+      <PropertyRef Name="Behavioral_Observation_ValuesID" />
+    </Key>
+    <Property Name="Behavioral_Observation_ValuesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Behavioral_Observation_ValuesType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Behavioral_Observation_Answer" Relationship="Self.FK__Behaviora__Behav__6383C8BA" FromRole="Behavioral_Observation_LOV" ToRole="Behavioral_Observation_Answer" />
+  </EntityType>
+  <EntityType Name="Case_History">
+    <Key>
+      <PropertyRef Name="CaseHistory_ID" />
+    </Key>
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GR_NO" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Behavioral_Observation_Answer" Relationship="Self.FK__Behaviora__CaseH__6477ECF3" FromRole="Case_History" ToRole="Behavioral_Observation_Answer" />
+    <NavigationProperty Name="New_Admission" Relationship="Self.FK__Case_Hist__GR_NO__239E4DCF" FromRole="Case_History" ToRole="New_Admission" />
+    <NavigationProperty Name="Conclusions" Relationship="Self.FK__Conclusio__CaseH__36B12243" FromRole="Case_History" ToRole="Conclusion" />
+    <NavigationProperty Name="Development_History_Answer" Relationship="Self.FK__Developme__CaseH__4316F928" FromRole="Case_History" ToRole="Development_History_Answer" />
+    <NavigationProperty Name="Education_History" Relationship="Self.FK__Education__CaseH__59063A47" FromRole="Case_History" ToRole="Education_History" />
+    <NavigationProperty Name="FamilyHistory_Answer" Relationship="Self.FK__FamilyHis__CaseH__286302EC" FromRole="Case_History" ToRole="FamilyHistory_Answer" />
+    <NavigationProperty Name="MedicalHistory_Answer" Relationship="Self.FK__MedicalHi__CaseH__5629CD9C" FromRole="Case_History" ToRole="MedicalHistory_Answer" />
+    <NavigationProperty Name="Particulars_of_Sibling" Relationship="Self.FK__Particula__CaseH__398D8EEE" FromRole="Case_History" ToRole="Particulars_of_Sibling" />
+    <NavigationProperty Name="PostNatal_Answer" Relationship="Self.FK__PostNatal__CaseH__4CA06362" FromRole="Case_History" ToRole="PostNatal_Answer" />
+    <NavigationProperty Name="Psycho_Social_Factors" Relationship="Self.FK__Psycho_So__CaseH__5BE2A6F2" FromRole="Case_History" ToRole="Psycho_Social_Factors" />
+    <NavigationProperty Name="Recommendation_Answer" Relationship="Self.FK__Recommend__CaseH__6D0D32F4" FromRole="Case_History" ToRole="Recommendation_Answer" />
+  </EntityType>
+  <EntityType Name="Conclusion">
+    <Key>
+      <PropertyRef Name="Conclusion_SR_NO" />
+    </Key>
+    <Property Name="Conclusion_SR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="Conclusion_text" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Conclusio__CaseH__36B12243" FromRole="Conclusion" ToRole="Case_History" />
+  </EntityType>
+  <EntityType Name="Development_History_AnsLOV">
+    <Key>
+      <PropertyRef Name="Development_History_AnsID" />
+    </Key>
+    <Property Name="Development_History_AnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Development_History_AnsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Development_History_Answer" Relationship="Self.FK__Developme__Devel__412EB0B6" FromRole="Development_History_AnsLOV" ToRole="Development_History_Answer" />
+  </EntityType>
+  <EntityType Name="Development_History_Answer">
+    <Key>
+      <PropertyRef Name="Development_History_SR_NO" />
+    </Key>
+    <Property Name="Development_History_SR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Development_History_AnsID" Type="Int32" Nullable="false" />
+    <Property Name="Development_History_ValuesID" Type="Int32" Nullable="false" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="User_Answer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Developme__CaseH__4316F928" FromRole="Development_History_Answer" ToRole="Case_History" />
+    <NavigationProperty Name="Development_History_AnsLOV" Relationship="Self.FK__Developme__Devel__412EB0B6" FromRole="Development_History_Answer" ToRole="Development_History_AnsLOV" />
+    <NavigationProperty Name="Development_History_LOV" Relationship="Self.FK__Developme__Devel__4222D4EF" FromRole="Development_History_Answer" ToRole="Development_History_LOV" />
+  </EntityType>
+  <EntityType Name="Development_History_LOV">
+    <Key>
+      <PropertyRef Name="Development_History_ValuesID" />
+    </Key>
+    <Property Name="Development_History_ValuesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Development_History_ValuesType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Development_History_Answer" Relationship="Self.FK__Developme__Devel__4222D4EF" FromRole="Development_History_LOV" ToRole="Development_History_Answer" />
+  </EntityType>
+  <EntityType Name="Developmental_History">
+    <Key>
+      <PropertyRef Name="Developmental_History_ID" />
+    </Key>
+    <Property Name="Developmental_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+    <Property Name="Use_Single_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Combine_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name_Single_Object" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Use_Simple_Sentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Engage_Conversation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Consistently_Sound" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Difficulty_Hearing_Speech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HearingTest_Where_When" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diificult_Understand_Speech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SpecificSounds_Incoorectly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Difficulty_Understanding_Direction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Difficulty_PlayActivities" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Engage_Excussive_Repetition_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Feeding_Problem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Speech_Language_Hearing_Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Professionals_Seen_Child" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Developme__Speac__151B244E" FromRole="Developmental_History" ToRole="Speach_Case_History" />
+  </EntityType>
+  <EntityType Name="Education_History">
+    <Key>
+      <PropertyRef Name="Education_History_SRNO" />
+    </Key>
+    <Property Name="Education_History_SRNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="Name_of_School" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Age_at_First_Admission" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Performance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reason_for_Withdrawal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Education__CaseH__59063A47" FromRole="Education_History" ToRole="Case_History" />
+  </EntityType>
+  <EntityType Name="Expressive_Langauage">
+    <Key>
+      <PropertyRef Name="Expressive_Langauage_ID" />
+    </Key>
+    <Property Name="Expressive_Langauage_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+    <Property Name="Babble" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="First_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Combine_2_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Complete_Sentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gestures" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phrases" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sing_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Words" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Conversation_Ex_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="When_Did_Concerned_Child_Speech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Caused_Your_Child_Difficulty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Worse_Better_Overtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Self_Consious_Speech_Langauge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Speech_Language_Hearing_Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Professionals_Seen_Child" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Expressiv__Speac__123EB7A3" FromRole="Expressive_Langauage" ToRole="Speach_Case_History" />
+  </EntityType>
+  <EntityType Name="Family_History_LOV">
+    <Key>
+      <PropertyRef Name="FamilyHistory_ValuesID" />
+    </Key>
+    <Property Name="FamilyHistory_ValuesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyHistory_valuesType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="FamilyHistory_Answer" Relationship="Self.FK__FamilyHis__Famil__276EDEB3" FromRole="Family_History_LOV" ToRole="FamilyHistory_Answer" />
+  </EntityType>
+  <EntityType Name="FamilyHistory_AnsLOV">
+    <Key>
+      <PropertyRef Name="FamilyHistory_AnsID" />
+    </Key>
+    <Property Name="FamilyHistory_AnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyHistory_AnsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="FamilyHistory_Answer" Relationship="Self.FK__FamilyHis__Famil__267ABA7A" FromRole="FamilyHistory_AnsLOV" ToRole="FamilyHistory_Answer" />
+  </EntityType>
+  <EntityType Name="FamilyHistory_Answer">
+    <Key>
+      <PropertyRef Name="FamilySR_NO" />
+    </Key>
+    <Property Name="FamilySR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Familyhistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="FamilyHistory_AnsID" Type="Int32" Nullable="false" />
+    <Property Name="FamilyHistory_ValuesID" Type="Int32" Nullable="false" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="Answer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__FamilyHis__CaseH__286302EC" FromRole="FamilyHistory_Answer" ToRole="Case_History" />
+    <NavigationProperty Name="Family_History_LOV" Relationship="Self.FK__FamilyHis__Famil__276EDEB3" FromRole="FamilyHistory_Answer" ToRole="Family_History_LOV" />
+    <NavigationProperty Name="FamilyHistory_AnsLOV" Relationship="Self.FK__FamilyHis__Famil__267ABA7A" FromRole="FamilyHistory_Answer" ToRole="FamilyHistory_AnsLOV" />
+  </EntityType>
+  <EntityType Name="General_Information">
+    <Key>
+      <PropertyRef Name="General_Information_ID" />
+    </Key>
+    <Property Name="General_Information_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+    <Property Name="Today_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Child_Primary_Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Parent_Primary_Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Live_With_Both_Parents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Child_Primary_Caregiver" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__General_I__Speac__09A971A2" FromRole="General_Information" ToRole="Speach_Case_History" />
+  </EntityType>
+  <EntityType Name="MedicalHistory_AnsLOV">
+    <Key>
+      <PropertyRef Name="Medical_History_AnsID" />
+    </Key>
+    <Property Name="Medical_History_AnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Medical_History_AnsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="MedicalHistory_Answer" Relationship="Self.FK__MedicalHi__Medic__5441852A" FromRole="MedicalHistory_AnsLOV" ToRole="MedicalHistory_Answer" />
+  </EntityType>
+  <EntityType Name="MedicalHistory_Answer">
+    <Key>
+      <PropertyRef Name="Medical_History_Answer_SRNO" />
+    </Key>
+    <Property Name="Medical_History_Answer_SRNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Medical_History_AnsID" Type="Int32" Nullable="false" />
+    <Property Name="Medical_History_ValuesID" Type="Int32" Nullable="false" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="User_Answer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__MedicalHi__CaseH__5629CD9C" FromRole="MedicalHistory_Answer" ToRole="Case_History" />
+    <NavigationProperty Name="MedicalHistory_AnsLOV" Relationship="Self.FK__MedicalHi__Medic__5441852A" FromRole="MedicalHistory_Answer" ToRole="MedicalHistory_AnsLOV" />
+    <NavigationProperty Name="MedicalHistory_LOV" Relationship="Self.FK__MedicalHi__Medic__5535A963" FromRole="MedicalHistory_Answer" ToRole="MedicalHistory_LOV" />
+  </EntityType>
+  <EntityType Name="MedicalHistory_LOV">
+    <Key>
+      <PropertyRef Name="Medical_History_ValuesID" />
+    </Key>
+    <Property Name="Medical_History_ValuesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Medical_History_ValuesType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="MedicalHistory_Answer" Relationship="Self.FK__MedicalHi__Medic__5535A963" FromRole="MedicalHistory_LOV" ToRole="MedicalHistory_Answer" />
+  </EntityType>
+  <EntityType Name="New_Admission">
+    <Key>
+      <PropertyRef Name="GR_NO" />
+    </Key>
+    <Property Name="GR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date_of_Addmission" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Student_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Student_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Class" Type="Int32" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Place_of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Religion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name_Last_School_Attended" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hobbies" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NIC" Type="Int32" Nullable="false" />
+    <Property Name="Relationship_with_Student" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Monthly_Income" Type="Int32" />
+    <Property Name="Occupation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zip_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_Residence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone_Office" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Disability" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Presenting_Complain" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Case_Hist__GR_NO__239E4DCF" FromRole="New_Admission" ToRole="Case_History" />
+    <NavigationProperty Name="User" Relationship="Self.FK__New_Addmis__U_ID__145C0A3F" FromRole="New_Admission" ToRole="Users" />
+    <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Speach_Ca__GR_NO__05D8E0BE" FromRole="New_Admission" ToRole="Speach_Case_History" />
+    <NavigationProperty Name="Speech_Assessment" Relationship="Self.FK__Speech_As__GR_NO__02FC7413" FromRole="New_Admission" ToRole="Speech_Assessment" />
+    <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Particulars_of_Sibling">
+    <Key>
+      <PropertyRef Name="Particulars_of_Sibling_SR_NO" />
+    </Key>
+    <Property Name="Particulars_of_Sibling_SR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="Number_of_Siblings" Type="Int32" />
+    <Property Name="Child_Order" Type="Int32" />
+    <Property Name="Any_Disability" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Particula__CaseH__398D8EEE" FromRole="Particulars_of_Sibling" ToRole="Case_History" />
+  </EntityType>
+  <EntityType Name="PostNatal_Answer">
+    <Key>
+      <PropertyRef Name="PostNatal_SR_NO" />
+    </Key>
+    <Property Name="PostNatal_SR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostNatal_AnsID" Type="Int32" Nullable="false" />
+    <Property Name="PostNatal_ID" Type="Int32" Nullable="false" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="User_Answer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__PostNatal__CaseH__4CA06362" FromRole="PostNatal_Answer" ToRole="Case_History" />
+    <NavigationProperty Name="PostNatal_DurationLOV" Relationship="Self.FK__PostNatal__PostN__4AB81AF0" FromRole="PostNatal_Answer" ToRole="PostNatal_DurationLOV" />
+    <NavigationProperty Name="PostNatal_LOV" Relationship="Self.FK__PostNatal__PostN__4BAC3F29" FromRole="PostNatal_Answer" ToRole="PostNatal_LOV" />
+  </EntityType>
+  <EntityType Name="PostNatal_DurationLOV">
+    <Key>
+      <PropertyRef Name="PostNatal_AnsID" />
+    </Key>
+    <Property Name="PostNatal_AnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostNatal_AnsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PostNatal_Answer" Relationship="Self.FK__PostNatal__PostN__4AB81AF0" FromRole="PostNatal_DurationLOV" ToRole="PostNatal_Answer" />
+  </EntityType>
+  <EntityType Name="PostNatal_LOV">
+    <Key>
+      <PropertyRef Name="PostNatal_ID" />
+    </Key>
+    <Property Name="PostNatal_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Post_Natal_ValuesType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PostNatal_Answer" Relationship="Self.FK__PostNatal__PostN__4BAC3F29" FromRole="PostNatal_LOV" ToRole="PostNatal_Answer" />
+  </EntityType>
+  <EntityType Name="Psycho_Social_Factors">
+    <Key>
+      <PropertyRef Name="Psycho_Social_Factors_SRNO" />
+    </Key>
+    <Property Name="Psycho_Social_Factors_SRNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="Friends_Attitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sibling_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAndParent_Attitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HobbiesAndInterest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Psycho_So__CaseH__5BE2A6F2" FromRole="Psycho_Social_Factors" ToRole="Case_History" />
+  </EntityType>
+  <EntityType Name="Receptive_langauge">
+    <Key>
+      <PropertyRef Name="Receptive_langauge_ID" />
+    </Key>
+    <Property Name="Receptive_langauge_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+    <Property Name="Single_Words" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Yes_No_Questions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sentences" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WH_Questions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Routine_Questions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Conversation_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Receptive__Speac__0F624AF8" FromRole="Receptive_langauge" ToRole="Speach_Case_History" />
+  </EntityType>
+  <EntityType Name="Recommendation_AnsLOV">
+    <Key>
+      <PropertyRef Name="Recommendation_AnsID" />
+    </Key>
+    <Property Name="Recommendation_AnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Recommendation_AnsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Recommendation_Answer" Relationship="Self.FK__Recommend__Recom__6B24EA82" FromRole="Recommendation_AnsLOV" ToRole="Recommendation_Answer" />
+  </EntityType>
+  <EntityType Name="Recommendation_Answer">
+    <Key>
+      <PropertyRef Name="Recommendation_Answer_SRNO" />
+    </Key>
+    <Property Name="Recommendation_Answer_SRNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Recommendation_AnsID" Type="Int32" Nullable="false" />
+    <Property Name="Recommendation_ValuesID" Type="Int32" Nullable="false" />
+    <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+    <Property Name="User_Answer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Case_History" Relationship="Self.FK__Recommend__CaseH__6D0D32F4" FromRole="Recommendation_Answer" ToRole="Case_History" />
+    <NavigationProperty Name="Recommendation_AnsLOV" Relationship="Self.FK__Recommend__Recom__6B24EA82" FromRole="Recommendation_Answer" ToRole="Recommendation_AnsLOV" />
+    <NavigationProperty Name="Recommendation_LOV" Relationship="Self.FK__Recommend__Recom__6C190EBB" FromRole="Recommendation_Answer" ToRole="Recommendation_LOV" />
+  </EntityType>
+  <EntityType Name="Recommendation_LOV">
+    <Key>
+      <PropertyRef Name="Recommendation_ValuesID" />
+    </Key>
+    <Property Name="Recommendation_ValuesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Recommendation_ValuesType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Recommendation_Answer" Relationship="Self.FK__Recommend__Recom__6C190EBB" FromRole="Recommendation_LOV" ToRole="Recommendation_Answer" />
+  </EntityType>
+  <EntityType Name="Speach_and_Langauge">
+    <Key>
+      <PropertyRef Name="Speach_and_Langauge_ID" />
+    </Key>
+    <Property Name="Speach_and_Langauge_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+    <Property Name="Speech_Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Speach_an__Speac__0C85DE4D" FromRole="Speach_and_Langauge" ToRole="Speach_Case_History" />
+  </EntityType>
+  <EntityType Name="Speach_Case_History">
+    <Key>
+      <PropertyRef Name="Speach_Case_History_ID" />
+    </Key>
+    <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GR_NO" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Developmental_History" Relationship="Self.FK__Developme__Speac__151B244E" FromRole="Speach_Case_History" ToRole="Developmental_History" />
+    <NavigationProperty Name="Expressive_Langauage" Relationship="Self.FK__Expressiv__Speac__123EB7A3" FromRole="Speach_Case_History" ToRole="Expressive_Langauage" />
+    <NavigationProperty Name="General_Information" Relationship="Self.FK__General_I__Speac__09A971A2" FromRole="Speach_Case_History" ToRole="General_Information" />
+    <NavigationProperty Name="New_Admission" Relationship="Self.FK__Speach_Ca__GR_NO__05D8E0BE" FromRole="Speach_Case_History" ToRole="New_Admission" />
+    <NavigationProperty Name="Receptive_langauge" Relationship="Self.FK__Receptive__Speac__0F624AF8" FromRole="Speach_Case_History" ToRole="Receptive_langauge" />
+    <NavigationProperty Name="Speach_and_Langauge" Relationship="Self.FK__Speach_an__Speac__0C85DE4D" FromRole="Speach_Case_History" ToRole="Speach_and_Langauge" />
+  </EntityType>
+  <EntityType Name="Speech_Assessment">
+    <Key>
+      <PropertyRef Name="Speech_Assessment_ID" />
+    </Key>
+    <Property Name="Speech_Assessment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GR_NO" Type="Int32" Nullable="false" />
+    <Property Name="Speech_Test_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="New_Admission" Relationship="Self.FK__Speech_As__GR_NO__02FC7413" FromRole="Speech_Assessment" ToRole="New_Admission" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Contact_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Rank" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Designation_Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="0" />
+    <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="New_Admission" Relationship="Self.FK__New_Addmis__U_ID__145C0A3F" FromRole="Users" ToRole="New_Admission" />
+  </EntityType>
+  <Association Name="FK__Behaviora__Behav__628FA481">
+    <End Role="Behavioral_Observation_AnsLOV" Type="Self.Behavioral_Observation_AnsLOV" Multiplicity="1" />
+    <End Role="Behavioral_Observation_Answer" Type="Self.Behavioral_Observation_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Behavioral_Observation_AnsLOV">
+        <PropertyRef Name="Behavioral_Observation_AnsID" />
+      </Principal>
+      <Dependent Role="Behavioral_Observation_Answer">
+        <PropertyRef Name="Behavioral_Observation_AnsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Behaviora__Behav__6383C8BA">
+    <End Role="Behavioral_Observation_LOV" Type="Self.Behavioral_Observation_LOV" Multiplicity="1" />
+    <End Role="Behavioral_Observation_Answer" Type="Self.Behavioral_Observation_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Behavioral_Observation_LOV">
+        <PropertyRef Name="Behavioral_Observation_ValuesID" />
+      </Principal>
+      <Dependent Role="Behavioral_Observation_Answer">
+        <PropertyRef Name="Behavioral_Observation_ValuesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Behaviora__CaseH__6477ECF3">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Behavioral_Observation_Answer" Type="Self.Behavioral_Observation_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Behavioral_Observation_Answer">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Case_Hist__GR_NO__239E4DCF">
+    <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="1" />
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New_Admission">
+        <PropertyRef Name="GR_NO" />
+      </Principal>
+      <Dependent Role="Case_History">
+        <PropertyRef Name="GR_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Conclusio__CaseH__36B12243">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Conclusion" Type="Self.Conclusion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Conclusion">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Developme__CaseH__4316F928">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Development_History_Answer" Type="Self.Development_History_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Development_History_Answer">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Education__CaseH__59063A47">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Education_History" Type="Self.Education_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Education_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FamilyHis__CaseH__286302EC">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="FamilyHistory_Answer" Type="Self.FamilyHistory_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="FamilyHistory_Answer">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedicalHi__CaseH__5629CD9C">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="MedicalHistory_Answer" Type="Self.MedicalHistory_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="MedicalHistory_Answer">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Particula__CaseH__398D8EEE">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Particulars_of_Sibling" Type="Self.Particulars_of_Sibling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Particulars_of_Sibling">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PostNatal__CaseH__4CA06362">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="PostNatal_Answer" Type="Self.PostNatal_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="PostNatal_Answer">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Psycho_So__CaseH__5BE2A6F2">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Psycho_Social_Factors" Type="Self.Psycho_Social_Factors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Psycho_Social_Factors">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Recommend__CaseH__6D0D32F4">
+    <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+    <End Role="Recommendation_Answer" Type="Self.Recommendation_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case_History">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Principal>
+      <Dependent Role="Recommendation_Answer">
+        <PropertyRef Name="CaseHistory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Developme__Devel__412EB0B6">
+    <End Role="Development_History_AnsLOV" Type="Self.Development_History_AnsLOV" Multiplicity="1" />
+    <End Role="Development_History_Answer" Type="Self.Development_History_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Development_History_AnsLOV">
+        <PropertyRef Name="Development_History_AnsID" />
+      </Principal>
+      <Dependent Role="Development_History_Answer">
+        <PropertyRef Name="Development_History_AnsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Developme__Devel__4222D4EF">
+    <End Role="Development_History_LOV" Type="Self.Development_History_LOV" Multiplicity="1" />
+    <End Role="Development_History_Answer" Type="Self.Development_History_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Development_History_LOV">
+        <PropertyRef Name="Development_History_ValuesID" />
+      </Principal>
+      <Dependent Role="Development_History_Answer">
+        <PropertyRef Name="Development_History_ValuesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Developme__Speac__151B244E">
+    <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+    <End Role="Developmental_History" Type="Self.Developmental_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speach_Case_History">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Principal>
+      <Dependent Role="Developmental_History">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expressiv__Speac__123EB7A3">
+    <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+    <End Role="Expressive_Langauage" Type="Self.Expressive_Langauage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speach_Case_History">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Principal>
+      <Dependent Role="Expressive_Langauage">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FamilyHis__Famil__276EDEB3">
+    <End Role="Family_History_LOV" Type="Self.Family_History_LOV" Multiplicity="1" />
+    <End Role="FamilyHistory_Answer" Type="Self.FamilyHistory_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Family_History_LOV">
+        <PropertyRef Name="FamilyHistory_ValuesID" />
+      </Principal>
+      <Dependent Role="FamilyHistory_Answer">
+        <PropertyRef Name="FamilyHistory_ValuesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FamilyHis__Famil__267ABA7A">
+    <End Role="FamilyHistory_AnsLOV" Type="Self.FamilyHistory_AnsLOV" Multiplicity="1" />
+    <End Role="FamilyHistory_Answer" Type="Self.FamilyHistory_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamilyHistory_AnsLOV">
+        <PropertyRef Name="FamilyHistory_AnsID" />
+      </Principal>
+      <Dependent Role="FamilyHistory_Answer">
+        <PropertyRef Name="FamilyHistory_AnsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__General_I__Speac__09A971A2">
+    <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+    <End Role="General_Information" Type="Self.General_Information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speach_Case_History">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Principal>
+      <Dependent Role="General_Information">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedicalHi__Medic__5441852A">
+    <End Role="MedicalHistory_AnsLOV" Type="Self.MedicalHistory_AnsLOV" Multiplicity="1" />
+    <End Role="MedicalHistory_Answer" Type="Self.MedicalHistory_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedicalHistory_AnsLOV">
+        <PropertyRef Name="Medical_History_AnsID" />
+      </Principal>
+      <Dependent Role="MedicalHistory_Answer">
+        <PropertyRef Name="Medical_History_AnsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedicalHi__Medic__5535A963">
+    <End Role="MedicalHistory_LOV" Type="Self.MedicalHistory_LOV" Multiplicity="1" />
+    <End Role="MedicalHistory_Answer" Type="Self.MedicalHistory_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedicalHistory_LOV">
+        <PropertyRef Name="Medical_History_ValuesID" />
+      </Principal>
+      <Dependent Role="MedicalHistory_Answer">
+        <PropertyRef Name="Medical_History_ValuesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__New_Addmis__U_ID__145C0A3F">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="New_Admission">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Speach_Ca__GR_NO__05D8E0BE">
+    <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="1" />
+    <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New_Admission">
+        <PropertyRef Name="GR_NO" />
+      </Principal>
+      <Dependent Role="Speach_Case_History">
+        <PropertyRef Name="GR_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Speech_As__GR_NO__02FC7413">
+    <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="1" />
+    <End Role="Speech_Assessment" Type="Self.Speech_Assessment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="New_Admission">
+        <PropertyRef Name="GR_NO" />
+      </Principal>
+      <Dependent Role="Speech_Assessment">
+        <PropertyRef Name="GR_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PostNatal__PostN__4AB81AF0">
+    <End Role="PostNatal_DurationLOV" Type="Self.PostNatal_DurationLOV" Multiplicity="1" />
+    <End Role="PostNatal_Answer" Type="Self.PostNatal_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostNatal_DurationLOV">
+        <PropertyRef Name="PostNatal_AnsID" />
+      </Principal>
+      <Dependent Role="PostNatal_Answer">
+        <PropertyRef Name="PostNatal_AnsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PostNatal__PostN__4BAC3F29">
+    <End Role="PostNatal_LOV" Type="Self.PostNatal_LOV" Multiplicity="1" />
+    <End Role="PostNatal_Answer" Type="Self.PostNatal_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostNatal_LOV">
+        <PropertyRef Name="PostNatal_ID" />
+      </Principal>
+      <Dependent Role="PostNatal_Answer">
+        <PropertyRef Name="PostNatal_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Receptive__Speac__0F624AF8">
+    <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+    <End Role="Receptive_langauge" Type="Self.Receptive_langauge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speach_Case_History">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Principal>
+      <Dependent Role="Receptive_langauge">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Recommend__Recom__6B24EA82">
+    <End Role="Recommendation_AnsLOV" Type="Self.Recommendation_AnsLOV" Multiplicity="1" />
+    <End Role="Recommendation_Answer" Type="Self.Recommendation_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recommendation_AnsLOV">
+        <PropertyRef Name="Recommendation_AnsID" />
+      </Principal>
+      <Dependent Role="Recommendation_Answer">
+        <PropertyRef Name="Recommendation_AnsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Recommend__Recom__6C190EBB">
+    <End Role="Recommendation_LOV" Type="Self.Recommendation_LOV" Multiplicity="1" />
+    <End Role="Recommendation_Answer" Type="Self.Recommendation_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recommendation_LOV">
+        <PropertyRef Name="Recommendation_ValuesID" />
+      </Principal>
+      <Dependent Role="Recommendation_Answer">
+        <PropertyRef Name="Recommendation_ValuesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Speach_an__Speac__0C85DE4D">
+    <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+    <End Role="Speach_and_Langauge" Type="Self.Speach_and_Langauge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speach_Case_History">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Principal>
+      <Dependent Role="Speach_and_Langauge">
+        <PropertyRef Name="Speach_Case_History_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QRSCS_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Behavioral_Observation_AnsLOV" EntityType="Self.Behavioral_Observation_AnsLOV" />
+    <EntitySet Name="Behavioral_Observation_Answer" EntityType="Self.Behavioral_Observation_Answer" />
+    <EntitySet Name="Behavioral_Observation_LOV" EntityType="Self.Behavioral_Observation_LOV" />
+    <EntitySet Name="Case_History" EntityType="Self.Case_History" />
+    <EntitySet Name="Conclusions" EntityType="Self.Conclusion" />
+    <EntitySet Name="Development_History_AnsLOV" EntityType="Self.Development_History_AnsLOV" />
+    <EntitySet Name="Development_History_Answer" EntityType="Self.Development_History_Answer" />
+    <EntitySet Name="Development_History_LOV" EntityType="Self.Development_History_LOV" />
+    <EntitySet Name="Developmental_History" EntityType="Self.Developmental_History" />
+    <EntitySet Name="Education_History" EntityType="Self.Education_History" />
+    <EntitySet Name="Expressive_Langauage" EntityType="Self.Expressive_Langauage" />
+    <EntitySet Name="Family_History_LOV" EntityType="Self.Family_History_LOV" />
+    <EntitySet Name="FamilyHistory_AnsLOV" EntityType="Self.FamilyHistory_AnsLOV" />
+    <EntitySet Name="FamilyHistory_Answer" EntityType="Self.FamilyHistory_Answer" />
+    <EntitySet Name="General_Information" EntityType="Self.General_Information" />
+    <EntitySet Name="MedicalHistory_AnsLOV" EntityType="Self.MedicalHistory_AnsLOV" />
+    <EntitySet Name="MedicalHistory_Answer" EntityType="Self.MedicalHistory_Answer" />
+    <EntitySet Name="MedicalHistory_LOV" EntityType="Self.MedicalHistory_LOV" />
+    <EntitySet Name="New_Admission" EntityType="Self.New_Admission" />
+    <EntitySet Name="Particulars_of_Sibling" EntityType="Self.Particulars_of_Sibling" />
+    <EntitySet Name="PostNatal_Answer" EntityType="Self.PostNatal_Answer" />
+    <EntitySet Name="PostNatal_DurationLOV" EntityType="Self.PostNatal_DurationLOV" />
+    <EntitySet Name="PostNatal_LOV" EntityType="Self.PostNatal_LOV" />
+    <EntitySet Name="Psycho_Social_Factors" EntityType="Self.Psycho_Social_Factors" />
+    <EntitySet Name="Receptive_langauge" EntityType="Self.Receptive_langauge" />
+    <EntitySet Name="Recommendation_AnsLOV" EntityType="Self.Recommendation_AnsLOV" />
+    <EntitySet Name="Recommendation_Answer" EntityType="Self.Recommendation_Answer" />
+    <EntitySet Name="Recommendation_LOV" EntityType="Self.Recommendation_LOV" />
+    <EntitySet Name="Speach_and_Langauge" EntityType="Self.Speach_and_Langauge" />
+    <EntitySet Name="Speach_Case_History" EntityType="Self.Speach_Case_History" />
+    <EntitySet Name="Speech_Assessment" EntityType="Self.Speech_Assessment" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Behaviora__Behav__628FA481" Association="Self.FK__Behaviora__Behav__628FA481">
+      <End Role="Behavioral_Observation_AnsLOV" EntitySet="Behavioral_Observation_AnsLOV" />
+      <End Role="Behavioral_Observation_Answer" EntitySet="Behavioral_Observation_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Behaviora__Behav__6383C8BA" Association="Self.FK__Behaviora__Behav__6383C8BA">
+      <End Role="Behavioral_Observation_LOV" EntitySet="Behavioral_Observation_LOV" />
+      <End Role="Behavioral_Observation_Answer" EntitySet="Behavioral_Observation_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Behaviora__CaseH__6477ECF3" Association="Self.FK__Behaviora__CaseH__6477ECF3">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Behavioral_Observation_Answer" EntitySet="Behavioral_Observation_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Case_Hist__GR_NO__239E4DCF" Association="Self.FK__Case_Hist__GR_NO__239E4DCF">
+      <End Role="New_Admission" EntitySet="New_Admission" />
+      <End Role="Case_History" EntitySet="Case_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Conclusio__CaseH__36B12243" Association="Self.FK__Conclusio__CaseH__36B12243">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Conclusion" EntitySet="Conclusions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Developme__CaseH__4316F928" Association="Self.FK__Developme__CaseH__4316F928">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Development_History_Answer" EntitySet="Development_History_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Education__CaseH__59063A47" Association="Self.FK__Education__CaseH__59063A47">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Education_History" EntitySet="Education_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FamilyHis__CaseH__286302EC" Association="Self.FK__FamilyHis__CaseH__286302EC">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="FamilyHistory_Answer" EntitySet="FamilyHistory_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedicalHi__CaseH__5629CD9C" Association="Self.FK__MedicalHi__CaseH__5629CD9C">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="MedicalHistory_Answer" EntitySet="MedicalHistory_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Particula__CaseH__398D8EEE" Association="Self.FK__Particula__CaseH__398D8EEE">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Particulars_of_Sibling" EntitySet="Particulars_of_Sibling" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PostNatal__CaseH__4CA06362" Association="Self.FK__PostNatal__CaseH__4CA06362">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="PostNatal_Answer" EntitySet="PostNatal_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Psycho_So__CaseH__5BE2A6F2" Association="Self.FK__Psycho_So__CaseH__5BE2A6F2">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Psycho_Social_Factors" EntitySet="Psycho_Social_Factors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Recommend__CaseH__6D0D32F4" Association="Self.FK__Recommend__CaseH__6D0D32F4">
+      <End Role="Case_History" EntitySet="Case_History" />
+      <End Role="Recommendation_Answer" EntitySet="Recommendation_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Developme__Devel__412EB0B6" Association="Self.FK__Developme__Devel__412EB0B6">
+      <End Role="Development_History_AnsLOV" EntitySet="Development_History_AnsLOV" />
+      <End Role="Development_History_Answer" EntitySet="Development_History_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Developme__Devel__4222D4EF" Association="Self.FK__Developme__Devel__4222D4EF">
+      <End Role="Development_History_LOV" EntitySet="Development_History_LOV" />
+      <End Role="Development_History_Answer" EntitySet="Development_History_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Developme__Speac__151B244E" Association="Self.FK__Developme__Speac__151B244E">
+      <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+      <End Role="Developmental_History" EntitySet="Developmental_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expressiv__Speac__123EB7A3" Association="Self.FK__Expressiv__Speac__123EB7A3">
+      <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+      <End Role="Expressive_Langauage" EntitySet="Expressive_Langauage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FamilyHis__Famil__276EDEB3" Association="Self.FK__FamilyHis__Famil__276EDEB3">
+      <End Role="Family_History_LOV" EntitySet="Family_History_LOV" />
+      <End Role="FamilyHistory_Answer" EntitySet="FamilyHistory_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FamilyHis__Famil__267ABA7A" Association="Self.FK__FamilyHis__Famil__267ABA7A">
+      <End Role="FamilyHistory_AnsLOV" EntitySet="FamilyHistory_AnsLOV" />
+      <End Role="FamilyHistory_Answer" EntitySet="FamilyHistory_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__General_I__Speac__09A971A2" Association="Self.FK__General_I__Speac__09A971A2">
+      <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+      <End Role="General_Information" EntitySet="General_Information" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedicalHi__Medic__5441852A" Association="Self.FK__MedicalHi__Medic__5441852A">
+      <End Role="MedicalHistory_AnsLOV" EntitySet="MedicalHistory_AnsLOV" />
+      <End Role="MedicalHistory_Answer" EntitySet="MedicalHistory_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedicalHi__Medic__5535A963" Association="Self.FK__MedicalHi__Medic__5535A963">
+      <End Role="MedicalHistory_LOV" EntitySet="MedicalHistory_LOV" />
+      <End Role="MedicalHistory_Answer" EntitySet="MedicalHistory_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__New_Addmis__U_ID__145C0A3F" Association="Self.FK__New_Addmis__U_ID__145C0A3F">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="New_Admission" EntitySet="New_Admission" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Speach_Ca__GR_NO__05D8E0BE" Association="Self.FK__Speach_Ca__GR_NO__05D8E0BE">
+      <End Role="New_Admission" EntitySet="New_Admission" />
+      <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Speech_As__GR_NO__02FC7413" Association="Self.FK__Speech_As__GR_NO__02FC7413">
+      <End Role="New_Admission" EntitySet="New_Admission" />
+      <End Role="Speech_Assessment" EntitySet="Speech_Assessment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PostNatal__PostN__4AB81AF0" Association="Self.FK__PostNatal__PostN__4AB81AF0">
+      <End Role="PostNatal_DurationLOV" EntitySet="PostNatal_DurationLOV" />
+      <End Role="PostNatal_Answer" EntitySet="PostNatal_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PostNatal__PostN__4BAC3F29" Association="Self.FK__PostNatal__PostN__4BAC3F29">
+      <End Role="PostNatal_LOV" EntitySet="PostNatal_LOV" />
+      <End Role="PostNatal_Answer" EntitySet="PostNatal_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Receptive__Speac__0F624AF8" Association="Self.FK__Receptive__Speac__0F624AF8">
+      <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+      <End Role="Receptive_langauge" EntitySet="Receptive_langauge" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Recommend__Recom__6B24EA82" Association="Self.FK__Recommend__Recom__6B24EA82">
+      <End Role="Recommendation_AnsLOV" EntitySet="Recommendation_AnsLOV" />
+      <End Role="Recommendation_Answer" EntitySet="Recommendation_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Recommend__Recom__6C190EBB" Association="Self.FK__Recommend__Recom__6C190EBB">
+      <End Role="Recommendation_LOV" EntitySet="Recommendation_LOV" />
+      <End Role="Recommendation_Answer" EntitySet="Recommendation_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Speach_an__Speac__0C85DE4D" Association="Self.FK__Speach_an__Speac__0C85DE4D">
+      <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+      <End Role="Speach_and_Langauge" EntitySet="Speach_and_Langauge" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

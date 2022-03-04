@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QRSCS_DatabaseModelStoreContainer" CdmEntityContainer="QRSCS_DatabaseEntities">
+    <EntitySetMapping Name="Case_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Case_History">
+        <MappingFragment StoreEntitySet="Case_History">
+          <ScalarProperty Name="Date_of_Examination" ColumnName="Date_of_Examination" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Developmental_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Developmental_History">
+        <MappingFragment StoreEntitySet="Developmental_History">
+          <ScalarProperty Name="Developmental_History_ID" ColumnName="Developmental_History_ID" />
+          <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+          <ScalarProperty Name="Use_Single_Word" ColumnName="Use_Single_Word" />
+          <ScalarProperty Name="Combine_Word" ColumnName="Combine_Word" />
+          <ScalarProperty Name="Name_Single_Object" ColumnName="Name_Single_Object" />
+          <ScalarProperty Name="Use_Simple_Sentence" ColumnName="Use_Simple_Sentence" />
+          <ScalarProperty Name="Engage_Conversation" ColumnName="Engage_Conversation" />
+          <ScalarProperty Name="Consistently_Sound" ColumnName="Consistently_Sound" />
+          <ScalarProperty Name="Difficulty_Hearing_Speech" ColumnName="Difficulty_Hearing_Speech" />
+          <ScalarProperty Name="HearingTest_Where_When" ColumnName="HearingTest_Where_When" />
+          <ScalarProperty Name="Diificult_Understand_Speech" ColumnName="Diificult_Understand_Speech" />
+          <ScalarProperty Name="SpecificSounds_Incoorectly" ColumnName="SpecificSounds_Incoorectly" />
+          <ScalarProperty Name="Difficulty_Understanding_Direction" ColumnName="Difficulty_Understanding_Direction" />
+          <ScalarProperty Name="Difficulty_PlayActivities" ColumnName="Difficulty_PlayActivities" />
+          <ScalarProperty Name="Engage_Excussive_Repetition_Word" ColumnName="Engage_Excussive_Repetition_Word" />
+          <ScalarProperty Name="Feeding_Problem" ColumnName="Feeding_Problem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expressive_Langauage">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Expressive_Langauage">
+        <MappingFragment StoreEntitySet="Expressive_Langauage">
+          <ScalarProperty Name="Expressive_Langauage_ID" ColumnName="Expressive_Langauage_ID" />
+          <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+          <ScalarProperty Name="Babble" ColumnName="Babble" />
+          <ScalarProperty Name="First_Word" ColumnName="First_Word" />
+          <ScalarProperty Name="Combine_2_Word" ColumnName="Combine_2_Word" />
+          <ScalarProperty Name="Complete_Sentence" ColumnName="Complete_Sentence" />
+          <ScalarProperty Name="Gestures" ColumnName="Gestures" />
+          <ScalarProperty Name="Phrases" ColumnName="Phrases" />
+          <ScalarProperty Name="Sing_Language" ColumnName="Sing_Language" />
+          <ScalarProperty Name="Sentence" ColumnName="Sentence" />
+          <ScalarProperty Name="Words" ColumnName="Words" />
+          <ScalarProperty Name="Conversation_Ex_Text" ColumnName="Conversation_Ex_Text" />
+          <ScalarProperty Name="When_Did_Concerned_Child_Speech" ColumnName="When_Did_Concerned_Child_Speech" />
+          <ScalarProperty Name="Caused_Your_Child_Difficulty" ColumnName="Caused_Your_Child_Difficulty" />
+          <ScalarProperty Name="Worse_Better_Overtime" ColumnName="Worse_Better_Overtime" />
+          <ScalarProperty Name="Self_Consious_Speech_Langauge" ColumnName="Self_Consious_Speech_Langauge" />
+          <ScalarProperty Name="Speech_Language_Hearing_Family" ColumnName="Speech_Language_Hearing_Family" />
+          <ScalarProperty Name="Professionals_Seen_Child" ColumnName="Professionals_Seen_Child" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="General_Information">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.General_Information">
+        <MappingFragment StoreEntitySet="General_Information">
+          <ScalarProperty Name="Child_Primary_Caregiver_Language" ColumnName="Child_Primary_Caregiver_Language" />
+          <ScalarProperty Name="General_Information_ID" ColumnName="General_Information_ID" />
+          <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+          <ScalarProperty Name="Today_Date" ColumnName="Today_Date" />
+          <ScalarProperty Name="Child_Primary_Language" ColumnName="Child_Primary_Language" />
+          <ScalarProperty Name="Parent_Primary_Language" ColumnName="Parent_Primary_Language" />
+          <ScalarProperty Name="Live_With_Both_Parents" ColumnName="Live_With_Both_Parents" />
+          <ScalarProperty Name="Child_Primary_Caregiver" ColumnName="Child_Primary_Caregiver" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receptive_langauge">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Receptive_langauge">
+        <MappingFragment StoreEntitySet="Receptive_langauge">
+          <ScalarProperty Name="Receptive_langauge_ID" ColumnName="Receptive_langauge_ID" />
+          <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+          <ScalarProperty Name="Single_Words" ColumnName="Single_Words" />
+          <ScalarProperty Name="Yes_No_Questions" ColumnName="Yes_No_Questions" />
+          <ScalarProperty Name="Sentences" ColumnName="Sentences" />
+          <ScalarProperty Name="WH_Questions" ColumnName="WH_Questions" />
+          <ScalarProperty Name="Routine_Questions" ColumnName="Routine_Questions" />
+          <ScalarProperty Name="Conversation_Text" ColumnName="Conversation_Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Speach_and_Langauge">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Speach_and_Langauge">
+        <MappingFragment StoreEntitySet="Speach_and_Langauge">
+          <ScalarProperty Name="Speach_and_Langauge_ID" ColumnName="Speach_and_Langauge_ID" />
+          <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+          <ScalarProperty Name="Speech_Text" ColumnName="Speech_Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Speach_Case_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Speach_Case_History">
+        <MappingFragment StoreEntitySet="Speach_Case_History">
+          <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+          <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="NIC" ColumnName="NIC" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="Designation_Role" ColumnName="Designation_Role" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="New_Admission">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.New_Admission">
+        <MappingFragment StoreEntitySet="New_Admission">
+          <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Presenting_Complain" ColumnName="Presenting_Complain" />
+          <ScalarProperty Name="Disability" ColumnName="Disability" />
+          <ScalarProperty Name="Phone_Office" ColumnName="Phone_Office" />
+          <ScalarProperty Name="Phone_Residence" ColumnName="Phone_Residence" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="Monthly_Income" ColumnName="Monthly_Income" />
+          <ScalarProperty Name="Relationship_with_Student" ColumnName="Relationship_with_Student" />
+          <ScalarProperty Name="NIC" ColumnName="NIC" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="Name_Last_School_Attended" ColumnName="Name_Last_School_Attended" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Place_of_Birth" ColumnName="Place_of_Birth" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Student_Last_Name" ColumnName="Student_Last_Name" />
+          <ScalarProperty Name="Student_First_Name" ColumnName="Student_First_Name" />
+          <ScalarProperty Name="Date_of_Addmission" ColumnName="Date_of_Addmission" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Behavioral_Observation">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Behavioral_Observation">
+        <MappingFragment StoreEntitySet="Behavioral_Observation">
+          <ScalarProperty Name="Asocial" ColumnName="Asocial" />
+          <ScalarProperty Name="Withdrawn" ColumnName="Withdrawn" />
+          <ScalarProperty Name="Isolation_" ColumnName="Isolation_" />
+          <ScalarProperty Name="Poor_Motivation" ColumnName="Poor_Motivation" />
+          <ScalarProperty Name="Short_Attention_Span" ColumnName="Short_Attention_Span" />
+          <ScalarProperty Name="Add_" ColumnName="Add_" />
+          <ScalarProperty Name="Low_Self_Image" ColumnName="Low_Self_Image" />
+          <ScalarProperty Name="Dependence" ColumnName="Dependence" />
+          <ScalarProperty Name="Complain" ColumnName="Complain" />
+          <ScalarProperty Name="Shyness" ColumnName="Shyness" />
+          <ScalarProperty Name="Self_Stimulation" ColumnName="Self_Stimulation" />
+          <ScalarProperty Name="Tantrum" ColumnName="Tantrum" />
+          <ScalarProperty Name="Hyper_Active" ColumnName="Hyper_Active" />
+          <ScalarProperty Name="Destructive" ColumnName="Destructive" />
+          <ScalarProperty Name="Distractibility" ColumnName="Distractibility" />
+          <ScalarProperty Name="Impulsivity" ColumnName="Impulsivity" />
+          <ScalarProperty Name="Restlessness" ColumnName="Restlessness" />
+          <ScalarProperty Name="Aggressive" ColumnName="Aggressive" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Behavioral_Observation_Answer_ID" ColumnName="Behavioral_Observation_Answer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conclusions">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Conclusion">
+        <MappingFragment StoreEntitySet="Conclusion">
+          <ScalarProperty Name="Conclusion_text" ColumnName="Conclusion_text" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Conclusion_ID" ColumnName="Conclusion_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Development_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Development_History">
+        <MappingFragment StoreEntitySet="Development_History">
+          <ScalarProperty Name="Any_Other_Neo_Natal_Period" ColumnName="Any_Other_Neo_Natal_Period" />
+          <ScalarProperty Name="Feeding_Difficulty" ColumnName="Feeding_Difficulty" />
+          <ScalarProperty Name="Cyanotic_Attacks" ColumnName="Cyanotic_Attacks" />
+          <ScalarProperty Name="Convulsions" ColumnName="Convulsions" />
+          <ScalarProperty Name="Juandice" ColumnName="Juandice" />
+          <ScalarProperty Name="Attendant_During_Labour" ColumnName="Attendant_During_Labour" />
+          <ScalarProperty Name="Condition_at_birth" ColumnName="Condition_at_birth" />
+          <ScalarProperty Name="Labor" ColumnName="Labor" />
+          <ScalarProperty Name="Any_Other_Development" ColumnName="Any_Other_Development" />
+          <ScalarProperty Name="Tobaco" ColumnName="Tobaco" />
+          <ScalarProperty Name="Alcohol" ColumnName="Alcohol" />
+          <ScalarProperty Name="Mediation_Drugs" ColumnName="Mediation_Drugs" />
+          <ScalarProperty Name="Attempted_Abortion" ColumnName="Attempted_Abortion" />
+          <ScalarProperty Name="Rubella" ColumnName="Rubella" />
+          <ScalarProperty Name="Exposure_or_Radiation" ColumnName="Exposure_or_Radiation" />
+          <ScalarProperty Name="Anemia" ColumnName="Anemia" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Development_History_ID" ColumnName="Development_History_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Education_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Education_History">
+        <MappingFragment StoreEntitySet="Education_History">
+          <ScalarProperty Name="Reason_for_Withdrawal" ColumnName="Reason_for_Withdrawal" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Performance" ColumnName="Performance" />
+          <ScalarProperty Name="Age_at_First_Admission" ColumnName="Age_at_First_Admission" />
+          <ScalarProperty Name="Name_of_School" ColumnName="Name_of_School" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Education_History_ID" ColumnName="Education_History_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Family_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Family_History">
+        <MappingFragment StoreEntitySet="Family_History">
+          <ScalarProperty Name="Mother_Family_System" ColumnName="Mother_Family_System" />
+          <ScalarProperty Name="Mother_Paternal_Relationship" ColumnName="Mother_Paternal_Relationship" />
+          <ScalarProperty Name="Mother_Age_at_the_time_of_Child_Birth" ColumnName="Mother_Age_at_the_time_of_Child_Birth" />
+          <ScalarProperty Name="Mother_Blood_Group" ColumnName="Mother_Blood_Group" />
+          <ScalarProperty Name="Mother_General_Health" ColumnName="Mother_General_Health" />
+          <ScalarProperty Name="Mother_Financial_Status" ColumnName="Mother_Financial_Status" />
+          <ScalarProperty Name="Mother_Profession" ColumnName="Mother_Profession" />
+          <ScalarProperty Name="Mother_Education" ColumnName="Mother_Education" />
+          <ScalarProperty Name="Mother_Age" ColumnName="Mother_Age" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="Father_Family_System" ColumnName="Father_Family_System" />
+          <ScalarProperty Name="Father_Paternal_Relationship" ColumnName="Father_Paternal_Relationship" />
+          <ScalarProperty Name="Father_Age_at_the_time_of_Child_Birth" ColumnName="Father_Age_at_the_time_of_Child_Birth" />
+          <ScalarProperty Name="Year_of_Marriage" ColumnName="Year_of_Marriage" />
+          <ScalarProperty Name="Father_Blood_Group" ColumnName="Father_Blood_Group" />
+          <ScalarProperty Name="Father_General_Health" ColumnName="Father_General_Health" />
+          <ScalarProperty Name="Father_Financial_Status" ColumnName="Father_Financial_Status" />
+          <ScalarProperty Name="Father_Profession" ColumnName="Father_Profession" />
+          <ScalarProperty Name="Father_Education" ColumnName="Father_Education" />
+          <ScalarProperty Name="Father_Age" ColumnName="Father_Age" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Family_History_ID" ColumnName="Family_History_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medical_History">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Medical_History">
+        <MappingFragment StoreEntitySet="Medical_History">
+          <ScalarProperty Name="Any_Other" ColumnName="Any_Other" />
+          <ScalarProperty Name="High_Grade_Fever_Age" ColumnName="High_Grade_Fever_Age" />
+          <ScalarProperty Name="Rheumatic_Fever_Age" ColumnName="Rheumatic_Fever_Age" />
+          <ScalarProperty Name="Convulsion_Age" ColumnName="Convulsion_Age" />
+          <ScalarProperty Name="Typhoid_Age" ColumnName="Typhoid_Age" />
+          <ScalarProperty Name="Influenza_Age" ColumnName="Influenza_Age" />
+          <ScalarProperty Name="Polio_Age" ColumnName="Polio_Age" />
+          <ScalarProperty Name="Diphtheria_Age" ColumnName="Diphtheria_Age" />
+          <ScalarProperty Name="Pneumonia_Age" ColumnName="Pneumonia_Age" />
+          <ScalarProperty Name="Chickenpox_Age" ColumnName="Chickenpox_Age" />
+          <ScalarProperty Name="Mumps_Age" ColumnName="Mumps_Age" />
+          <ScalarProperty Name="Whooping_Enough_Age" ColumnName="Whooping_Enough_Age" />
+          <ScalarProperty Name="Measles_Age" ColumnName="Measles_Age" />
+          <ScalarProperty Name="High_Grade_Fever_Answer" ColumnName="High_Grade_Fever_Answer" />
+          <ScalarProperty Name="Rheumatic_Fever_Answer" ColumnName="Rheumatic_Fever_Answer" />
+          <ScalarProperty Name="Convulsion_Answer" ColumnName="Convulsion_Answer" />
+          <ScalarProperty Name="Typhoid_Answer" ColumnName="Typhoid_Answer" />
+          <ScalarProperty Name="Influenza_Answer" ColumnName="Influenza_Answer" />
+          <ScalarProperty Name="Polio_Answer" ColumnName="Polio_Answer" />
+          <ScalarProperty Name="Diphtheria_Answer" ColumnName="Diphtheria_Answer" />
+          <ScalarProperty Name="Pneumonia_Answer" ColumnName="Pneumonia_Answer" />
+          <ScalarProperty Name="Chickenpox_Answer" ColumnName="Chickenpox_Answer" />
+          <ScalarProperty Name="Mumps_Answer" ColumnName="Mumps_Answer" />
+          <ScalarProperty Name="Whooping_Enough_Answer" ColumnName="Whooping_Enough_Answer" />
+          <ScalarProperty Name="Measles_Answer" ColumnName="Measles_Answer" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Medical_History_ID" ColumnName="Medical_History_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Particulars_of_Sibling">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Particulars_of_Sibling">
+        <MappingFragment StoreEntitySet="Particulars_of_Sibling">
+          <ScalarProperty Name="Any_Disability" ColumnName="Any_Disability" />
+          <ScalarProperty Name="Child_Order" ColumnName="Child_Order" />
+          <ScalarProperty Name="Number_of_Siblings" ColumnName="Number_of_Siblings" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Particulars_of_Sibling_ID" ColumnName="Particulars_of_Sibling_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post_Natal">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Post_Natal">
+        <MappingFragment StoreEntitySet="Post_Natal">
+          <ScalarProperty Name="Any_Other_illness_Years" ColumnName="Any_Other_illness_Years" />
+          <ScalarProperty Name="Puberty_Years" ColumnName="Puberty_Years" />
+          <ScalarProperty Name="Severe_Malnutrition_Years" ColumnName="Severe_Malnutrition_Years" />
+          <ScalarProperty Name="Dehydration_Years" ColumnName="Dehydration_Years" />
+          <ScalarProperty Name="Head_Injury_Years" ColumnName="Head_Injury_Years" />
+          <ScalarProperty Name="Convulsion_Years" ColumnName="Convulsion_Years" />
+          <ScalarProperty Name="Meningitis_Encephalitis_Years" ColumnName="Meningitis_Encephalitis_Years" />
+          <ScalarProperty Name="Sphineter_Control_Years" ColumnName="Sphineter_Control_Years" />
+          <ScalarProperty Name="Able_to_Feed_alone_Years" ColumnName="Able_to_Feed_alone_Years" />
+          <ScalarProperty Name="Spoke_1st_Word_Years" ColumnName="Spoke_1st_Word_Years" />
+          <ScalarProperty Name="Walk_alone_Years" ColumnName="Walk_alone_Years" />
+          <ScalarProperty Name="Crawling_Years" ColumnName="Crawling_Years" />
+          <ScalarProperty Name="Sitting_alone_Years" ColumnName="Sitting_alone_Years" />
+          <ScalarProperty Name="Teething_Years" ColumnName="Teething_Years" />
+          <ScalarProperty Name="Neck_Control_Years" ColumnName="Neck_Control_Years" />
+          <ScalarProperty Name="Cooing_Years" ColumnName="Cooing_Years" />
+          <ScalarProperty Name="Smiling_Years" ColumnName="Smiling_Years" />
+          <ScalarProperty Name="Birth_Weight_Years" ColumnName="Birth_Weight_Years" />
+          <ScalarProperty Name="Any_Other_illness_Months" ColumnName="Any_Other_illness_Months" />
+          <ScalarProperty Name="Severe_Malnutrition_Months" ColumnName="Severe_Malnutrition_Months" />
+          <ScalarProperty Name="Dehydration_Months" ColumnName="Dehydration_Months" />
+          <ScalarProperty Name="Head_Injury_Months" ColumnName="Head_Injury_Months" />
+          <ScalarProperty Name="Convulsion_Months" ColumnName="Convulsion_Months" />
+          <ScalarProperty Name="Meningitis_Encephalitis_Months" ColumnName="Meningitis_Encephalitis_Months" />
+          <ScalarProperty Name="Puberty_Months" ColumnName="Puberty_Months" />
+          <ScalarProperty Name="Sphineter_Control_Months" ColumnName="Sphineter_Control_Months" />
+          <ScalarProperty Name="Able_to_Feed_alone_Months" ColumnName="Able_to_Feed_alone_Months" />
+          <ScalarProperty Name="Spoke_1st_Word_Months" ColumnName="Spoke_1st_Word_Months" />
+          <ScalarProperty Name="Walk_alone_Months" ColumnName="Walk_alone_Months" />
+          <ScalarProperty Name="Crawling_Months" ColumnName="Crawling_Months" />
+          <ScalarProperty Name="Sitting_alone_Months" ColumnName="Sitting_alone_Months" />
+          <ScalarProperty Name="Teething_Months" ColumnName="Teething_Months" />
+          <ScalarProperty Name="Neck_Control_Months" ColumnName="Neck_Control_Months" />
+          <ScalarProperty Name="Cooing_Months" ColumnName="Cooing_Months" />
+          <ScalarProperty Name="Smiling_Months" ColumnName="Smiling_Months" />
+          <ScalarProperty Name="Birth_Weight_Months" ColumnName="Birth_Weight_Months" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Post_Natal_ID" ColumnName="Post_Natal_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Psycho_Social_Factors">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Psycho_Social_Factors">
+        <MappingFragment StoreEntitySet="Psycho_Social_Factors">
+          <ScalarProperty Name="HobbiesAndInterest" ColumnName="HobbiesAndInterest" />
+          <ScalarProperty Name="HomeAndParent_Attitude" ColumnName="HomeAndParent_Attitude" />
+          <ScalarProperty Name="Sibling_Relationship" ColumnName="Sibling_Relationship" />
+          <ScalarProperty Name="Friends_Attitude" ColumnName="Friends_Attitude" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Psycho_Social_Factors_ID" ColumnName="Psycho_Social_Factors_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recommendations">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Recommendation">
+        <MappingFragment StoreEntitySet="Recommendation">
+          <ScalarProperty Name="Any_other" ColumnName="Any_other" />
+          <ScalarProperty Name="Medication" ColumnName="Medication" />
+          <ScalarProperty Name="Special_School" ColumnName="Special_School" />
+          <ScalarProperty Name="Home_Based_Program" ColumnName="Home_Based_Program" />
+          <ScalarProperty Name="Any_other_Home" ColumnName="Any_other_Home" />
+          <ScalarProperty Name="Parental_Counseling" ColumnName="Parental_Counseling" />
+          <ScalarProperty Name="Attention_to_home_situation" ColumnName="Attention_to_home_situation" />
+          <ScalarProperty Name="Orthopedic_appliance" ColumnName="Orthopedic_appliance" />
+          <ScalarProperty Name="Heraing_Aid" ColumnName="Heraing_Aid" />
+          <ScalarProperty Name="Glasses" ColumnName="Glasses" />
+          <ScalarProperty Name="Correction_of_Defect" ColumnName="Correction_of_Defect" />
+          <ScalarProperty Name="Vocational_Therapy" ColumnName="Vocational_Therapy" />
+          <ScalarProperty Name="Music_Therapy" ColumnName="Music_Therapy" />
+          <ScalarProperty Name="Speech_Therapy" ColumnName="Speech_Therapy" />
+          <ScalarProperty Name="Occupational_Therapy" ColumnName="Occupational_Therapy" />
+          <ScalarProperty Name="Physical_Therapy" ColumnName="Physical_Therapy" />
+          <ScalarProperty Name="IEP" ColumnName="IEP" />
+          <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+          <ScalarProperty Name="Recommendation_Answer_ID" ColumnName="Recommendation_Answer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Speech_Therapy_Assessment">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Speech_Therapy_Assessment">
+        <MappingFragment StoreEntitySet="Speech_Therapy_Assessment">
+          <ScalarProperty Name="Date_of_Assessment" ColumnName="Date_of_Assessment" />
+          <ScalarProperty Name="Speech_Test_Image" ColumnName="Speech_Test_Image" />
+          <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+          <ScalarProperty Name="Speech_Therapy_Assessment_ID" ColumnName="Speech_Therapy_Assessment_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audiology_Assessment">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Audiology_Assessment">
+        <MappingFragment StoreEntitySet="Audiology_Assessment">
+          <ScalarProperty Name="Date_of_Assessment" ColumnName="Date_of_Assessment" />
+          <ScalarProperty Name="Right_Ear_Picture" ColumnName="Right_Ear_Picture" />
+          <ScalarProperty Name="Left_Ear_Picture" ColumnName="Left_Ear_Picture" />
+          <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+          <ScalarProperty Name="Audiology_Assessment_ID" ColumnName="Audiology_Assessment_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Create_Teacher">
+      <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Create_Teacher">
+        <MappingFragment StoreEntitySet="Create_Teacher">
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Date_of_Birth" ColumnName="Date_of_Birth" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="NIC" ColumnName="NIC" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Teacher_Name" ColumnName="Teacher_Name" />
+          <ScalarProperty Name="Teacher_Picture" ColumnName="Teacher_Picture" />
+          <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

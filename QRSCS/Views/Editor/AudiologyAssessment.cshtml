@@ -1,0 +1,445 @@
+﻿@model QRSCS.Models.AudiologyAssessmentModel
+
+@{
+    ViewBag.Title = "Audiology Assessment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+    @*<link type="text/css" rel="stylesheet" href="~/Content/adminassets/css/style.css">*@
+<style>
+#rightbox {
+        width: 48%;
+        float: left;
+        left: 0;
+        margin: 5px;
+        border: solid 1px black;
+}
+
+.canvasjs-chart-credit {
+            display: none !important;
+}
+label {
+        display: block;
+        text-align: center;
+        margin: auto;
+}
+.ab {
+    width: 93%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6e707e;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d3e2;
+    border-radius: 0.35rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.ab:focus {
+    color: #6e707e;
+    background-color: #fff;
+    border-color: #bac8f3;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(78 115 223 / 25%);
+}
+label[for^=txt]{
+    text-align: right;
+    float: left;
+    display: inline-block !important;                   
+}
+
+    </style>
+<script type="text/javascript">
+        // Right Script
+        window.addEventListener('load', function (){
+        var dpsRight = []; //dataPoints.
+        var dpsRight2 = []; //dataPoints.
+
+            var chart = new CanvasJS.Chart("chartContainerRight", {
+                title: {
+                    text: "Right Ear"
+                },
+                toolTip:{
+                    shared:true
+                },
+                legend:{
+                    cursor:"pointer",
+                    verticalAlign: "bottom",
+                    horizontalAlign: "center",
+                    dockInsidePlotArea: true,
+                    itemclick: toogleDataSeries
+                },
+                data: [{
+                    type: "line",
+                    color: "black",
+                    markerType: "square",
+                    lineDashType: "dot",
+                    showInLegend: true,
+                    name: "Bone-Masked",
+                    dataPoints: dpsRight2
+                },
+
+            {
+                type: "line",
+                color: "red",
+  	            markerType: "circle",
+                showInLegend: true,
+	            name: "Air-Unmasked",
+                dataPoints: dpsRight
+            }],
+            axisX:{
+                title:"Frequency (Hz)",
+                gridDashType: "line",
+			    gridThickness: 1,
+			    minimum: 125,
+			    maximum: 8000,
+ },
+             axisY:{
+                title:"Hearing Level (dBHL)",
+                gridDashType: "line",
+			    gridThickness: 1,
+			    interval:10,
+ },
+            });
+
+            function addDataPointsAndRender() {
+                xValueRight = Number(document.getElementById("xValueRight").value);
+                yValueRight = Number(document.getElementById("yValueRight").value);
+                dpsRight.push({
+                    x: xValueRight,
+                    y: yValueRight
+                });
+                chart.render();
+            }
+
+                function addDataPointsAndRender2() {
+                xValueRight2 = Number(document.getElementById("xValueRight2").value);
+                yValueRight2 = Number(document.getElementById("yValueRight2").value);
+                dpsRight2.push({
+                    x: xValueRight2,
+                    y: yValueRight2
+                });
+                chart.render();
+            }
+            var renderButtonRight = document.getElementById("renderButtonRight");
+            renderButtonRight.addEventListener("click", addDataPointsAndRender);
+            var renderButtonRight2 = document.getElementById("renderButtonRight2");
+            renderButtonRight2.addEventListener("click", addDataPointsAndRender2);
+        });
+    </script>
+<script>
+ //    Left Script
+ window.addEventListener('load', function (){
+        var dpsLeft = []; //dataPoints.
+        var dpsLeft2 = []; //dataPoints.
+
+            var chart = new CanvasJS.Chart("chartContainerLeft", {
+                title: {
+                    text: "Left Ear"
+                },
+                toolTip:{
+                shared:true
+                },
+                legend:{
+                    ursor:"pointer",
+                    verticalAlign: "bottom",
+                    horizontalAlign: "center",
+                    dockInsidePlotArea: true,
+                    itemclick: toogleDataSeries
+                },
+                data: [{
+                    type: "line",
+                    color: "black",
+                    markerType: "square",
+                    lineDashType: "dot",
+                    showInLegend: true,
+                    name: "Bone-Masked",
+                    dataPoints: dpsLeft2
+                },
+
+            {
+                type: "line",
+                color: "red",
+  	            markerType: "circle",
+                showInLegend: true,
+	            name: "Air-Unmasked",
+                dataPoints: dpsLeft
+            }],
+            axisX:{
+                title:"Frequency (Hz)",
+                gridDashType: "dot",
+			    gridThickness: 1,
+			    minimum: 125,
+			    maximum: 8000,
+ },
+            axisY:{
+                title:"Hearing Level (dBHL)",
+                gridDashType: "dot",
+			    gridThickness: 1,
+			    interval:10,
+ },
+            });
+
+            function addDataPointsAndRenderLeft() {
+                xValueLeft = Number(document.getElementById("xValueLeft").value);
+                yValueLeft = Number(document.getElementById("yValueLeft").value);
+                dpsLeft.push({
+                    x: xValueLeft,
+                    y: yValueLeft
+                });
+                chart.render();
+            }
+
+                function addDataPointsAndRenderLeft2() {
+                xValueLeft2 = Number(document.getElementById("xValueLeft2").value);
+                yValueLeft2 = Number(document.getElementById("yValueLeft2").value);
+                dpsLeft2.push({
+                    x: xValueLeft2,
+                    y: yValueLeft2
+                });
+                chart.render();
+            }
+            var renderButtonLeft = document.getElementById("renderButtonLeft");
+            renderButtonLeft.addEventListener("click", addDataPointsAndRenderLeft);
+            var renderButtonLeft2 = document.getElementById("renderButtonLeft2");
+            renderButtonLeft2.addEventListener("click", addDataPointsAndRenderLeft2);
+        });
+        function toogleDataSeries(e){
+            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+  }         else{
+                    e.dataSeries.visible = true;
+  }
+            chart.render();
+}
+
+    </script>
+<script src="~/Content/adminassets/canvas-js-graph.js"></script>
+@*<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>*@
+
+
+
+@*@using (Html.BeginForm("AudiologyAssessment", "Editor", FormMethod.Post, new { @class = "edit-profile m-b30", enctype = "multipart/form-data" }))
+{*@
+    @*<ul class="form-section page-section">
+        <li class="form-line form-line-column form-col-4 jf-required" data-type="control_textbox" id="id_59">
+            <label class="form-label form-label-top" id="label_59" for="input_59">
+                GR NO
+                <span class="form-required">
+                    *
+                </span>
+            </label>
+            <div id="cid_59" class="form-input-wide jf-required" data-layout="half">
+                @Html.TextBoxFor(x => x.GR_NO, null, new { @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "20", dataminlength = "3", placeholder = "Enter a GR No" })
+                @Html.ValidationMessageFor(x => x.GR_NO, null, new { style = "color:red" })
+            </div>
+        </li>
+
+        <li class="form-line form-line-column form-col-3 jf-required" data-type="control_birthdate" id="id_39">
+            <label class="form-label form-label-top" id="label_39" for="input_39">
+                Date Of Admission
+                <span class="form-required">
+                    *
+                </span>
+            </label>
+            <div id="cid_39" class="form-input-wide jf-required" data-layout="full">
+                @Html.EditorFor(x => x.Date_of_Assessment, new { htmlAttributes = new { @class = "form-textbox validate[required, limitDate, validateLiteDate]", @type = "date" } })
+                @Html.ValidationMessageFor(x => x.Date_of_Assessment, null, new { style = "color:red" })
+
+            </div>
+        </li>
+
+        <li class="form-line form-line-column form-col-4 jf-required" data-type="control_textbox" id="id_59">
+            <label class="form-label form-label-top" id="label_59" for="input_59">
+                Name
+                <span class="form-required">
+                    *
+                </span>
+            </label>
+            <div id="cid_59" class="form-input-wide jf-required" data-layout="half">
+                @Html.TextBoxFor(x => x.Name, null, new { @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "20", dataminlength = "3", placeholder = "Enter a Name" })
+                @Html.ValidationMessageFor(x => x.Name, null, new { style = "color:red" })
+            </div>
+        </li>
+
+        <li class="form-line form-line-column form-col-4 jf-required" data-type="control_textbox" id="id_59">
+            <label class="form-label form-label-top" id="label_59" for="input_59">
+                Father Name
+                <span class="form-required">
+                    *
+                </span>
+            </label>
+            <div id="cid_59" class="form-input-wide jf-required" data-layout="half">
+                @Html.TextBoxFor(x => x.Father_Name, null, new { @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "20", dataminlength = "3", placeholder = "Enter a Father Name" })
+                @Html.ValidationMessageFor(x => x.Father_Name, null, new { style = "color:red" })
+            </div>
+        </li>
+
+        <li class="form-line form-line-column form-col-4 jf-required" data-type="control_textbox" id="id_59">
+            <label class="form-label form-label-top" id="label_59" for="input_59">
+                Disabilities
+                <span class="form-required">
+                    *
+                </span>
+            </label>
+            <div id="cid_59" class="form-input-wide jf-required" data-layout="half">
+                @Html.TextBoxFor(x => x.Disabilities, null, new { @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "20", dataminlength = "3", placeholder = "Select a Disability" })
+                @Html.ValidationMessageFor(x => x.Disabilities, null, new { style = "color:red" })
+            </div>
+        </li>
+        </ul>*@
+
+        <!-- right box -->
+        <div id="rightbox">
+            <label for="">Air Unmasked</label><br />
+            <div class="form-group row">
+                <label >Frequency (Hz):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="xValueRight" type="number" Class="ab" step="any" placeholder="Enter Frequency (Hz):">
+
+                    </div></div>
+            <div class="form-group row">
+                <label >Hearing Level (dBHL):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="yValueRight" type="number" Class="ab" step="any" placeholder="Enter Hearing Level (dBHL):">
+
+                    </div></div>
+            <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-9">
+                    <button id="renderButtonRight" class="btn" style="display:block; float:right;">Save & Plot</button>
+                </div>
+            </div>
+            @* 2nd graph *@
+            <label for="">Bone-Masked</label><br />
+            <div class="form-group row">
+                <label>Frequency (Hz):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="xValueRight2" type="number" Class="ab" step="any" placeholder="Enter Frequency (Hz):">
+
+                    </div>
+            </div>
+            <div class="form-group row">
+                <label>Hearing Level (dBHL):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="yValueRight2" type="number" Class="ab" step="any" placeholder="Enter Hearing Level (dBHL):">
+
+                    </div>
+            </div>
+            <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-9">
+        <button id="renderButtonRight2" class="btn" style="display:block; float:right;">Save & Plot</button>
+    </div></div>
+
+    <div id="chartContainerRight" style="height: 270px; max-width: 920px; margin: 0px auto;"></div>
+
+    @*<label for="">Air Unmasked</label>
+        <br />
+        <label for="txt"> Frequency (Hz): </label>
+        <input id="xValueRight" type="number" Class="ab" step="any" placeholder="Enter X-Value">
+        <br />
+        <label for="txt"> Hearing Level (dBHL):</label>
+        <input id="yValueRight" type="number" Class="ab" step="any" placeholder="Enter Y-Value"><br />*@
+    @*<br />*@
+    @*<label for="">Bone-Masked</label>
+        <br />
+        Frequency (Hz):
+        <input id="xValueRight2"  Class = "ab" type="number" step="any" placeholder="Enter X-Value"><br />
+         Hearing Level (dBHL):
+        <input id="yValueRight2"  Class = "ab" type="number" step="any" placeholder="Enter Y-Value"><br />*@
+
+
+</div>
+        <!-- left box -->
+        <div id="rightbox">
+            <label for="">Air Unmasked</label><br />
+            <div class="form-group row">
+                <label>Frequency (Hz):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="xValueLeft" type="number" Class="ab" step="any" placeholder="Enter Frequency (Hz):">
+
+                    </div>
+            </div>
+            <div class="form-group row">
+                <label>Hearing Level (dBHL):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="yValueLeft" type="number" Class="ab" step="any" placeholder="Enter Hearing Level (dBHL):">
+
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-9">
+                    <button id="renderButtonLeft" class="btn" style="display:block; float:right;">Save & Plot</button>
+                </div>
+            </div>
+            @* 2nd graph *@
+            <label for="">Bone-Masked</label><br />
+            <div class="form-group row">
+                <label>Frequency (Hz):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="xValueLeft2" type="number" Class="ab" step="any" placeholder="Enter Frequency (Hz):">
+
+                    </div>
+            </div>
+            <div class="form-group row">
+                <label>Hearing Level (dBHL):</label>
+                <p>
+                    <div class="col-sm-7">
+                        <input id="yValueLeft2" type="number" Class="ab" step="any" placeholder="Enter Hearing Level (dBHL):">
+
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-9">
+                    <button id="renderButtonLeft2" class="btn" style="display:block; float:right;">Save & Plot</button>
+                </div>
+            </div>
+
+            <div id="chartContainerLeft" style="height: 270px; max-width: 920px; margin: 0px auto;"></div>
+            </div>
+            @*<label for="">Air Unmasked</label>*@
+            @*<br />
+            Frequency (Hz):
+            <input id="xValueLeft" Class = "ab" type="number" step="any" placeholder="Enter X-Value"><br />
+             Hearing Level (dBHL):
+            <input id="yValueLeft" Class = "ab" type="number" step="any" placeholder="Enter Y-Value"><br />
+            <button id="renderButtonLeft" class="btn">Save & Plot</button>*@
+
+            @*<br />*@
+            @*<label for="">Bone-Masked</label>
+            <br />
+            Frequency (Hz):
+            <input id="xValueLeft2" Class = "ab" type="number" step="any" placeholder="Enter X-Value"><br /> 
+            Hearing Level (dBHL):
+            <input id="yValueLeft2" Class = "ab" type="number" step="any" placeholder="Enter Y-Value"><br />
+            <button id="renderButtonLeft2" class="btn">Save & Plot</button>
+            <div id="chartContainerLeft" style="height: 270px; max-width: 920px; margin: 0px auto;"></div>
+        </div>*@
+
+    <div class="row">
+        <div class="col-sm-5">
+        </div>
+        <div class="col-sm-7">
+            @*<button type="submit" class="btn">Save changes</button>*@
+        </div>
+    </div>
+@*}*@
+
+

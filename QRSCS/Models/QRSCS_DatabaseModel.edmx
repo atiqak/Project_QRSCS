@@ -1,0 +1,2033 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QRSCS_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Audiology_Assessment">
+          <Key>
+            <PropertyRef Name="Audiology_Assessment_ID" />
+          </Key>
+          <Property Name="Audiology_Assessment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GR_NO" Type="int" Nullable="false" />
+          <Property Name="Date_of_Assessment" Type="date" Nullable="false" />
+          <Property Name="Left_Ear_Picture" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Right_Ear_Picture" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Behavioral_Observation">
+          <Key>
+            <PropertyRef Name="Behavioral_Observation_Answer_ID" />
+          </Key>
+          <Property Name="Behavioral_Observation_Answer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Aggressive" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Restlessness" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Impulsivity" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Distractibility" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Destructive" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Hyper_Active" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tantrum" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Self_Stimulation" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Shyness" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Complain" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Dependence" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Low_Self_Image" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Add_" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Short_Attention_Span" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Poor_Motivation" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Isolation_" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Withdrawn" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Asocial" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Case_History">
+          <Key>
+            <PropertyRef Name="CaseHistory_ID" />
+          </Key>
+          <Property Name="CaseHistory_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GR_NO" Type="int" Nullable="false" />
+          <Property Name="Date_of_Examination" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Conclusion">
+          <Key>
+            <PropertyRef Name="Conclusion_ID" />
+          </Key>
+          <Property Name="Conclusion_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Conclusion_text" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Create_Teacher">
+          <Key>
+            <PropertyRef Name="Teacher_ID" />
+          </Key>
+          <Property Name="Teacher_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Teacher_Picture" Type="varchar(max)" Nullable="false" />
+          <Property Name="Teacher_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NIC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_of_Birth" Type="date" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Update_By" Type="varchar" MaxLength="50" />
+          <Property Name="Update_Date" Type="date" />
+          <Property Name="Creation_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Development_History">
+          <Key>
+            <PropertyRef Name="Development_History_ID" />
+          </Key>
+          <Property Name="Development_History_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Anemia" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Exposure_or_Radiation" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Rubella" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Attempted_Abortion" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Mediation_Drugs" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Alcohol" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tobaco" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Any_Other_Development" Type="nvarchar" MaxLength="50" />
+          <Property Name="Labor" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Condition_at_birth" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Attendant_During_Labour" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Juandice" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Convulsions" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Cyanotic_Attacks" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Feeding_Difficulty" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Any_Other_Neo_Natal_Period" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Developmental_History">
+          <Key>
+            <PropertyRef Name="Developmental_History_ID" />
+          </Key>
+          <Property Name="Developmental_History_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speach_Case_History_ID" Type="int" Nullable="false" />
+          <Property Name="Use_Single_Word" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Combine_Word" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_Single_Object" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Use_Simple_Sentence" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Engage_Conversation" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Consistently_Sound" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Difficulty_Hearing_Speech" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HearingTest_Where_When" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Diificult_Understand_Speech" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SpecificSounds_Incoorectly" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Difficulty_Understanding_Direction" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Difficulty_PlayActivities" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Engage_Excussive_Repetition_Word" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Feeding_Problem" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Education_History">
+          <Key>
+            <PropertyRef Name="Education_History_ID" />
+          </Key>
+          <Property Name="Education_History_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Name_of_School" Type="nvarchar" MaxLength="20" />
+          <Property Name="Age_at_First_Admission" Type="nvarchar" MaxLength="20" />
+          <Property Name="Performance" Type="nvarchar" MaxLength="20" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="20" />
+          <Property Name="Reason_for_Withdrawal" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Expressive_Langauage">
+          <Key>
+            <PropertyRef Name="Expressive_Langauage_ID" />
+          </Key>
+          <Property Name="Expressive_Langauage_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speach_Case_History_ID" Type="int" Nullable="false" />
+          <Property Name="Babble" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="First_Word" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Combine_2_Word" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Complete_Sentence" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gestures" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phrases" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sing_Language" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sentence" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Words" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Conversation_Ex_Text" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="When_Did_Concerned_Child_Speech" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Caused_Your_Child_Difficulty" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Worse_Better_Overtime" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Self_Consious_Speech_Langauge" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Speech_Language_Hearing_Family" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Professionals_Seen_Child" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Family_History">
+          <Key>
+            <PropertyRef Name="Family_History_ID" />
+          </Key>
+          <Property Name="Family_History_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Father_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Father_Age" Type="int" Nullable="false" />
+          <Property Name="Father_Education" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Profession" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Financial_Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_General_Health" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Blood_Group" Type="nvarchar" MaxLength="20" />
+          <Property Name="Year_of_Marriage" Type="nvarchar" MaxLength="20" />
+          <Property Name="Father_Age_at_the_time_of_Child_Birth" Type="int" />
+          <Property Name="Father_Paternal_Relationship" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Family_System" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_Age" Type="int" />
+          <Property Name="Mother_Education" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_Profession" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_Financial_Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_General_Health" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_Blood_Group" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mother_Age_at_the_time_of_Child_Birth" Type="int" />
+          <Property Name="Mother_Paternal_Relationship" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mother_Family_System" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="General_Information">
+          <Key>
+            <PropertyRef Name="General_Information_ID" />
+          </Key>
+          <Property Name="General_Information_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speach_Case_History_ID" Type="int" Nullable="false" />
+          <Property Name="Today_Date" Type="date" Nullable="false" />
+          <Property Name="Child_Primary_Language" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Parent_Primary_Language" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Live_With_Both_Parents" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Child_Primary_Caregiver" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Child_Primary_Caregiver_Language" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Medical_History">
+          <Key>
+            <PropertyRef Name="Medical_History_ID" />
+          </Key>
+          <Property Name="Medical_History_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Measles_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Whooping_Enough_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Mumps_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Chickenpox_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Pneumonia_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Diphtheria_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Polio_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Influenza_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Typhoid_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Convulsion_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Rheumatic_Fever_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="High_Grade_Fever_Answer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Measles_Age" Type="int" />
+          <Property Name="Whooping_Enough_Age" Type="int" />
+          <Property Name="Mumps_Age" Type="int" />
+          <Property Name="Chickenpox_Age" Type="int" />
+          <Property Name="Pneumonia_Age" Type="int" />
+          <Property Name="Diphtheria_Age" Type="int" />
+          <Property Name="Polio_Age" Type="int" />
+          <Property Name="Influenza_Age" Type="int" />
+          <Property Name="Typhoid_Age" Type="int" />
+          <Property Name="Convulsion_Age" Type="int" />
+          <Property Name="Rheumatic_Fever_Age" Type="int" />
+          <Property Name="High_Grade_Fever_Age" Type="int" />
+          <Property Name="Any_Other" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="New_Admission">
+          <Key>
+            <PropertyRef Name="GR_NO" />
+          </Key>
+          <Property Name="GR_NO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Date_of_Addmission" Type="date" Nullable="false" />
+          <Property Name="Student_First_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Student_Last_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Class" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dob" Type="date" Nullable="false" />
+          <Property Name="Place_of_Birth" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Religion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_Last_School_Attended" Type="varchar" MaxLength="50" />
+          <Property Name="Hobbies" Type="varchar" MaxLength="50" />
+          <Property Name="Father_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Education" Type="varchar" MaxLength="50" />
+          <Property Name="NIC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Relationship_with_Student" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Monthly_Income" Type="nvarchar" MaxLength="50" />
+          <Property Name="Occupation" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zip_Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone_Residence" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone_Office" Type="nvarchar" MaxLength="50" />
+          <Property Name="Disability" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Presenting_Complain" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Update_Date" Type="date" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Particulars_of_Sibling">
+          <Key>
+            <PropertyRef Name="Particulars_of_Sibling_ID" />
+          </Key>
+          <Property Name="Particulars_of_Sibling_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Number_of_Siblings" Type="int" Nullable="false" />
+          <Property Name="Child_Order" Type="int" />
+          <Property Name="Any_Disability" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Post_Natal">
+          <Key>
+            <PropertyRef Name="Post_Natal_ID" />
+          </Key>
+          <Property Name="Post_Natal_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Birth_Weight_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Smiling_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Cooing_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Neck_Control_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Teething_Months" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sitting_alone_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Crawling_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Walk_alone_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Spoke_1st_Word_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Able_to_Feed_alone_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sphineter_Control_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Puberty_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Meningitis_Encephalitis_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Convulsion_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Head_Injury_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Dehydration_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Severe_Malnutrition_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Any_Other_illness_Months" Type="nvarchar" MaxLength="20" />
+          <Property Name="Birth_Weight_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Smiling_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Cooing_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Neck_Control_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Teething_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sitting_alone_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Crawling_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Walk_alone_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Spoke_1st_Word_Years" Type="nvarchar" MaxLength="50" />
+          <Property Name="Able_to_Feed_alone_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sphineter_Control_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Puberty_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Meningitis_Encephalitis_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Convulsion_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Head_Injury_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Dehydration_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Severe_Malnutrition_Years" Type="nvarchar" MaxLength="20" />
+          <Property Name="Any_Other_illness_Years" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Psycho_Social_Factors">
+          <Key>
+            <PropertyRef Name="Psycho_Social_Factors_ID" />
+          </Key>
+          <Property Name="Psycho_Social_Factors_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="Friends_Attitude" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sibling_Relationship" Type="nvarchar" MaxLength="20" />
+          <Property Name="HomeAndParent_Attitude" Type="nvarchar" MaxLength="30" />
+          <Property Name="HobbiesAndInterest" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Receptive_langauge">
+          <Key>
+            <PropertyRef Name="Receptive_langauge_ID" />
+          </Key>
+          <Property Name="Receptive_langauge_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speach_Case_History_ID" Type="int" Nullable="false" />
+          <Property Name="Single_Words" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Yes_No_Questions" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sentences" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WH_Questions" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Routine_Questions" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Conversation_Text" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="Recommendation_Answer_ID" />
+          </Key>
+          <Property Name="Recommendation_Answer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseHistory_ID" Type="int" Nullable="false" />
+          <Property Name="IEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Physical_Therapy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Occupational_Therapy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Speech_Therapy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Music_Therapy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Vocational_Therapy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Correction_of_Defect" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Glasses" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Heraing_Aid" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Orthopedic_appliance" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Attention_to_home_situation" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parental_Counseling" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Any_other_Home" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Home_Based_Program" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Special_School" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Medication" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Any_other" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Speach_and_Langauge">
+          <Key>
+            <PropertyRef Name="Speach_and_Langauge_ID" />
+          </Key>
+          <Property Name="Speach_and_Langauge_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speach_Case_History_ID" Type="int" Nullable="false" />
+          <Property Name="Speech_Text" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Speach_Case_History">
+          <Key>
+            <PropertyRef Name="Speach_Case_History_ID" />
+          </Key>
+          <Property Name="Speach_Case_History_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GR_NO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Speech_Therapy_Assessment">
+          <Key>
+            <PropertyRef Name="Speech_Therapy_Assessment_ID" />
+          </Key>
+          <Property Name="Speech_Therapy_Assessment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GR_NO" Type="int" Nullable="false" />
+          <Property Name="Speech_Test_Image" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date_of_Assessment" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Picture" Type="nvarchar(max)" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Father_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NIC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="Contact_Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rank" Type="nvarchar" MaxLength="50" />
+          <Property Name="Designation_Role" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Creation_Date" Type="date" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" />
+          <Property Name="Update_Date" Type="date" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Audiology__GR_NO__0B91BA14">
+          <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="1" />
+          <End Role="Audiology_Assessment" Type="Self.Audiology_Assessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Audiology_Assessment">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Behaviora__CaseH__68487DD7">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Behavioral_Observation" Type="Self.Behavioral_Observation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Behavioral_Observation">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Case_Hist__GR_NO__5165187F">
+          <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="1" />
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Case_History">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Conclusio__CaseH__6B24EA82">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Conclusion" Type="Self.Conclusion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Conclusion">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Create_Te__User___0E6E26BF">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Create_Teacher" Type="Self.Create_Teacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Create_Teacher">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Developme__CaseH__59FA5E80">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Development_History" Type="Self.Development_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Development_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Developme__Speac__02084FDA">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Developmental_History" Type="Self.Developmental_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Developmental_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Education__CaseH__628FA481">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Education_History" Type="Self.Education_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Education_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Expressiv__Speac__7F2BE32F">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Expressive_Langauage" Type="Self.Expressive_Langauage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Expressive_Langauage">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Family_Hi__CaseH__5441852A">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Family_History" Type="Self.Family_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Family_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__General_I__Speac__76969D2E">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="General_Information" Type="Self.General_Information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="General_Information">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medical_H__CaseH__5FB337D6">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Medical_History" Type="Self.Medical_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Medical_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__New_Admis__User___4BAC3F29">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="New_Admission">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Particula__CaseH__571DF1D5">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Particulars_of_Sibling" Type="Self.Particulars_of_Sibling" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Particulars_of_Sibling">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Post_Nata__CaseH__5CD6CB2B">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Post_Natal" Type="Self.Post_Natal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Post_Natal">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Psycho_So__CaseH__656C112C">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Psycho_Social_Factors" Type="Self.Psycho_Social_Factors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Psycho_Social_Factors">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Receptive__Speac__7C4F7684">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Receptive_langauge" Type="Self.Receptive_langauge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Receptive_langauge">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Recommend__CaseH__6E01572D">
+          <End Role="Case_History" Type="Self.Case_History" Multiplicity="1" />
+          <End Role="Recommendation" Type="Self.Recommendation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Recommendation">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Speach_an__Speac__797309D9">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Speach_and_Langauge" Type="Self.Speach_and_Langauge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Speach_and_Langauge">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Speach_Ca__GR_NO__73BA3083">
+          <End Role="New_Admission" Type="Self.New_Admission" Multiplicity="1" />
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Speach_Case_History">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QRSCS_DatabaseModelStoreContainer">
+          <EntitySet Name="Audiology_Assessment" EntityType="Self.Audiology_Assessment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Behavioral_Observation" EntityType="Self.Behavioral_Observation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Case_History" EntityType="Self.Case_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Conclusion" EntityType="Self.Conclusion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Create_Teacher" EntityType="Self.Create_Teacher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Development_History" EntityType="Self.Development_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Developmental_History" EntityType="Self.Developmental_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Education_History" EntityType="Self.Education_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Expressive_Langauage" EntityType="Self.Expressive_Langauage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Family_History" EntityType="Self.Family_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="General_Information" EntityType="Self.General_Information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medical_History" EntityType="Self.Medical_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="New_Admission" EntityType="Self.New_Admission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Particulars_of_Sibling" EntityType="Self.Particulars_of_Sibling" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Post_Natal" EntityType="Self.Post_Natal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Psycho_Social_Factors" EntityType="Self.Psycho_Social_Factors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Receptive_langauge" EntityType="Self.Receptive_langauge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recommendation" EntityType="Self.Recommendation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Speach_and_Langauge" EntityType="Self.Speach_and_Langauge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Speach_Case_History" EntityType="Self.Speach_Case_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Speech_Therapy_Assessment" EntityType="Self.Speech_Therapy_Assessment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Audiology__GR_NO__0B91BA14" Association="Self.FK__Audiology__GR_NO__0B91BA14">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Audiology_Assessment" EntitySet="Audiology_Assessment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Behaviora__CaseH__68487DD7" Association="Self.FK__Behaviora__CaseH__68487DD7">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Behavioral_Observation" EntitySet="Behavioral_Observation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Case_Hist__GR_NO__5165187F" Association="Self.FK__Case_Hist__GR_NO__5165187F">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Case_History" EntitySet="Case_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Conclusio__CaseH__6B24EA82" Association="Self.FK__Conclusio__CaseH__6B24EA82">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Conclusion" EntitySet="Conclusion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Create_Te__User___0E6E26BF" Association="Self.FK__Create_Te__User___0E6E26BF">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Create_Teacher" EntitySet="Create_Teacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Developme__CaseH__59FA5E80" Association="Self.FK__Developme__CaseH__59FA5E80">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Development_History" EntitySet="Development_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Developme__Speac__02084FDA" Association="Self.FK__Developme__Speac__02084FDA">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Developmental_History" EntitySet="Developmental_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Education__CaseH__628FA481" Association="Self.FK__Education__CaseH__628FA481">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Education_History" EntitySet="Education_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Expressiv__Speac__7F2BE32F" Association="Self.FK__Expressiv__Speac__7F2BE32F">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Expressive_Langauage" EntitySet="Expressive_Langauage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Family_Hi__CaseH__5441852A" Association="Self.FK__Family_Hi__CaseH__5441852A">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Family_History" EntitySet="Family_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__General_I__Speac__76969D2E" Association="Self.FK__General_I__Speac__76969D2E">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="General_Information" EntitySet="General_Information" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medical_H__CaseH__5FB337D6" Association="Self.FK__Medical_H__CaseH__5FB337D6">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Medical_History" EntitySet="Medical_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__New_Admis__User___4BAC3F29" Association="Self.FK__New_Admis__User___4BAC3F29">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="New_Admission" EntitySet="New_Admission" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Particula__CaseH__571DF1D5" Association="Self.FK__Particula__CaseH__571DF1D5">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Particulars_of_Sibling" EntitySet="Particulars_of_Sibling" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Post_Nata__CaseH__5CD6CB2B" Association="Self.FK__Post_Nata__CaseH__5CD6CB2B">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Post_Natal" EntitySet="Post_Natal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Psycho_So__CaseH__656C112C" Association="Self.FK__Psycho_So__CaseH__656C112C">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Psycho_Social_Factors" EntitySet="Psycho_Social_Factors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Receptive__Speac__7C4F7684" Association="Self.FK__Receptive__Speac__7C4F7684">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Receptive_langauge" EntitySet="Receptive_langauge" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Recommend__CaseH__6E01572D" Association="Self.FK__Recommend__CaseH__6E01572D">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Recommendation" EntitySet="Recommendation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Speach_an__Speac__797309D9" Association="Self.FK__Speach_an__Speac__797309D9">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Speach_and_Langauge" EntitySet="Speach_and_Langauge" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Speach_Ca__GR_NO__73BA3083" Association="Self.FK__Speach_Ca__GR_NO__73BA3083">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QRSCS_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Case_History">
+          <Key>
+            <PropertyRef Name="CaseHistory_ID" />
+          </Key>
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GR_NO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="New_Admission" Relationship="QRSCS_DatabaseModel.FK__Case_Hist__GR_NO__1ED998B21" FromRole="Case_History" ToRole="New_Admission" />
+          <Property Name="Date_of_Examination" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Behavioral_Observation" Relationship="QRSCS_DatabaseModel.FK__Behaviora__CaseH__55BFB948" FromRole="Case_History" ToRole="Behavioral_Observation" />
+          <NavigationProperty Name="Conclusions" Relationship="QRSCS_DatabaseModel.FK__Conclusio__CaseH__589C25F3" FromRole="Case_History" ToRole="Conclusion" />
+          <NavigationProperty Name="Development_History" Relationship="QRSCS_DatabaseModel.FK__Developme__CaseH__477199F1" FromRole="Case_History" ToRole="Development_History" />
+          <NavigationProperty Name="Education_History" Relationship="QRSCS_DatabaseModel.FK__Education__CaseH__5006DFF2" FromRole="Case_History" ToRole="Education_History" />
+          <NavigationProperty Name="Family_History" Relationship="QRSCS_DatabaseModel.FK__Family_Hi__CaseH__41B8C09B" FromRole="Case_History" ToRole="Family_History" />
+          <NavigationProperty Name="Medical_History" Relationship="QRSCS_DatabaseModel.FK__Medical_H__CaseH__4D2A7347" FromRole="Case_History" ToRole="Medical_History" />
+          <NavigationProperty Name="Particulars_of_Sibling" Relationship="QRSCS_DatabaseModel.FK__Particula__CaseH__44952D46" FromRole="Case_History" ToRole="Particulars_of_Sibling" />
+          <NavigationProperty Name="Post_Natal" Relationship="QRSCS_DatabaseModel.FK__Post_Nata__CaseH__4A4E069C" FromRole="Case_History" ToRole="Post_Natal" />
+          <NavigationProperty Name="Psycho_Social_Factors" Relationship="QRSCS_DatabaseModel.FK__Psycho_So__CaseH__52E34C9D" FromRole="Case_History" ToRole="Psycho_Social_Factors" />
+          <NavigationProperty Name="Recommendations" Relationship="QRSCS_DatabaseModel.FK__Recommend__CaseH__5B78929E" FromRole="Case_History" ToRole="Recommendation" />
+        </EntityType>
+        <EntityType Name="Developmental_History">
+          <Key>
+            <PropertyRef Name="Developmental_History_ID" />
+          </Key>
+          <Property Name="Developmental_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+          <Property Name="Use_Single_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Combine_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_Single_Object" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Use_Simple_Sentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Engage_Conversation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Consistently_Sound" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Difficulty_Hearing_Speech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HearingTest_Where_When" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Diificult_Understand_Speech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SpecificSounds_Incoorectly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Difficulty_Understanding_Direction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Difficulty_PlayActivities" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Engage_Excussive_Repetition_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Feeding_Problem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Developme__Speac__70DDC3D8" FromRole="Developmental_History" ToRole="Speach_Case_History" />
+        </EntityType>
+        <EntityType Name="Expressive_Langauage">
+          <Key>
+            <PropertyRef Name="Expressive_Langauage_ID" />
+          </Key>
+          <Property Name="Expressive_Langauage_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+          <Property Name="Babble" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="First_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Combine_2_Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Complete_Sentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gestures" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phrases" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sing_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Words" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Conversation_Ex_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="When_Did_Concerned_Child_Speech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Caused_Your_Child_Difficulty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Worse_Better_Overtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Self_Consious_Speech_Langauge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Speech_Language_Hearing_Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Professionals_Seen_Child" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Expressiv__Speac__6E01572D" FromRole="Expressive_Langauage" ToRole="Speach_Case_History" />
+        </EntityType>
+        <EntityType Name="General_Information">
+          <Key>
+            <PropertyRef Name="General_Information_ID" />
+          </Key>
+          <Property Name="General_Information_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+          <Property Name="Today_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Child_Primary_Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent_Primary_Language" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Live_With_Both_Parents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Child_Primary_Caregiver" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__General_I__Speac__656C112C" FromRole="General_Information" ToRole="Speach_Case_History" />
+          <Property Name="Child_Primary_Caregiver_Language" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Receptive_langauge">
+          <Key>
+            <PropertyRef Name="Receptive_langauge_ID" />
+          </Key>
+          <Property Name="Receptive_langauge_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+          <Property Name="Single_Words" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Yes_No_Questions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sentences" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WH_Questions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Routine_Questions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Conversation_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Receptive__Speac__6B24EA82" FromRole="Receptive_langauge" ToRole="Speach_Case_History" />
+        </EntityType>
+        <EntityType Name="Speach_and_Langauge">
+          <Key>
+            <PropertyRef Name="Speach_and_Langauge_ID" />
+          </Key>
+          <Property Name="Speach_and_Langauge_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" />
+          <Property Name="Speech_Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Speach_Case_History" Relationship="Self.FK__Speach_an__Speac__68487DD7" FromRole="Speach_and_Langauge" ToRole="Speach_Case_History" />
+        </EntityType>
+        <EntityType Name="Speach_Case_History">
+          <Key>
+            <PropertyRef Name="Speach_Case_History_ID" />
+          </Key>
+          <Property Name="Speach_Case_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GR_NO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Developmental_History" Relationship="Self.FK__Developme__Speac__70DDC3D8" FromRole="Speach_Case_History" ToRole="Developmental_History" />
+          <NavigationProperty Name="Expressive_Langauage" Relationship="Self.FK__Expressiv__Speac__6E01572D" FromRole="Speach_Case_History" ToRole="Expressive_Langauage" />
+          <NavigationProperty Name="General_Information" Relationship="Self.FK__General_I__Speac__656C112C" FromRole="Speach_Case_History" ToRole="General_Information" />
+          <NavigationProperty Name="Receptive_langauge" Relationship="Self.FK__Receptive__Speac__6B24EA82" FromRole="Speach_Case_History" ToRole="Receptive_langauge" />
+          <NavigationProperty Name="Speach_and_Langauge" Relationship="Self.FK__Speach_an__Speac__68487DD7" FromRole="Speach_Case_History" ToRole="Speach_and_Langauge" />
+          <NavigationProperty Name="New_Admission" Relationship="QRSCS_DatabaseModel.FK__Speach_Ca__GR_NO__628FA4811" FromRole="Speach_Case_History" ToRole="New_Admission" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Contact_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Designation_Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Creation_Date" Type="DateTime" Precision="0" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="DateTime" Precision="0" />
+          <Property Name="Updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="New_Admission" Relationship="QRSCS_DatabaseModel.FK__New_Addmi__User___1273C1CD1" FromRole="User" ToRole="New_Admission" />
+          <NavigationProperty Name="Create_Teacher" Relationship="QRSCS_DatabaseModel.FK__Create_Te__User___2116E6DF" FromRole="User" ToRole="Create_Teacher" />
+        </EntityType>
+        <Association Name="FK__Developme__Speac__70DDC3D8">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Developmental_History" Type="Self.Developmental_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Developmental_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Expressiv__Speac__6E01572D">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Expressive_Langauage" Type="Self.Expressive_Langauage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Expressive_Langauage">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__General_I__Speac__656C112C">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="General_Information" Type="Self.General_Information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="General_Information">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Receptive__Speac__6B24EA82">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Receptive_langauge" Type="Self.Receptive_langauge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Receptive_langauge">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Speach_an__Speac__68487DD7">
+          <End Role="Speach_Case_History" Type="Self.Speach_Case_History" Multiplicity="1" />
+          <End Role="Speach_and_Langauge" Type="Self.Speach_and_Langauge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speach_Case_History">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Principal>
+            <Dependent Role="Speach_and_Langauge">
+              <PropertyRef Name="Speach_Case_History_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QRSCS_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Case_History" EntityType="Self.Case_History" />
+          <EntitySet Name="Developmental_History" EntityType="Self.Developmental_History" />
+          <EntitySet Name="Expressive_Langauage" EntityType="Self.Expressive_Langauage" />
+          <EntitySet Name="General_Information" EntityType="Self.General_Information" />
+          <EntitySet Name="Receptive_langauge" EntityType="Self.Receptive_langauge" />
+          <EntitySet Name="Speach_and_Langauge" EntityType="Self.Speach_and_Langauge" />
+          <EntitySet Name="Speach_Case_History" EntityType="Self.Speach_Case_History" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__Developme__Speac__70DDC3D8" Association="Self.FK__Developme__Speac__70DDC3D8">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Developmental_History" EntitySet="Developmental_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Expressiv__Speac__6E01572D" Association="Self.FK__Expressiv__Speac__6E01572D">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Expressive_Langauage" EntitySet="Expressive_Langauage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__General_I__Speac__656C112C" Association="Self.FK__General_I__Speac__656C112C">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="General_Information" EntitySet="General_Information" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Receptive__Speac__6B24EA82" Association="Self.FK__Receptive__Speac__6B24EA82">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Receptive_langauge" EntitySet="Receptive_langauge" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Speach_an__Speac__68487DD7" Association="Self.FK__Speach_an__Speac__68487DD7">
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+            <End Role="Speach_and_Langauge" EntitySet="Speach_and_Langauge" />
+          </AssociationSet>
+          <EntitySet Name="New_Admission" EntityType="QRSCS_DatabaseModel.New_Admission" />
+          <AssociationSet Name="FK__Case_Hist__GR_NO__1ED998B21" Association="QRSCS_DatabaseModel.FK__Case_Hist__GR_NO__1ED998B21">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Case_History" EntitySet="Case_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__New_Addmi__User___1273C1CD1" Association="QRSCS_DatabaseModel.FK__New_Addmi__User___1273C1CD1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="New_Admission" EntitySet="New_Admission" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Speach_Ca__GR_NO__628FA4811" Association="QRSCS_DatabaseModel.FK__Speach_Ca__GR_NO__628FA4811">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Speach_Case_History" EntitySet="Speach_Case_History" />
+          </AssociationSet>
+          <EntitySet Name="Behavioral_Observation" EntityType="QRSCS_DatabaseModel.Behavioral_Observation" />
+          <EntitySet Name="Conclusions" EntityType="QRSCS_DatabaseModel.Conclusion" />
+          <EntitySet Name="Development_History" EntityType="QRSCS_DatabaseModel.Development_History" />
+          <EntitySet Name="Education_History" EntityType="QRSCS_DatabaseModel.Education_History" />
+          <EntitySet Name="Family_History" EntityType="QRSCS_DatabaseModel.Family_History" />
+          <EntitySet Name="Medical_History" EntityType="QRSCS_DatabaseModel.Medical_History" />
+          <EntitySet Name="Particulars_of_Sibling" EntityType="QRSCS_DatabaseModel.Particulars_of_Sibling" />
+          <EntitySet Name="Post_Natal" EntityType="QRSCS_DatabaseModel.Post_Natal" />
+          <EntitySet Name="Psycho_Social_Factors" EntityType="QRSCS_DatabaseModel.Psycho_Social_Factors" />
+          <EntitySet Name="Recommendations" EntityType="QRSCS_DatabaseModel.Recommendation" />
+          <EntitySet Name="Speech_Therapy_Assessment" EntityType="QRSCS_DatabaseModel.Speech_Therapy_Assessment" />
+          <AssociationSet Name="FK__Behaviora__CaseH__55BFB948" Association="QRSCS_DatabaseModel.FK__Behaviora__CaseH__55BFB948">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Behavioral_Observation" EntitySet="Behavioral_Observation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Conclusio__CaseH__589C25F3" Association="QRSCS_DatabaseModel.FK__Conclusio__CaseH__589C25F3">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Conclusion" EntitySet="Conclusions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Developme__CaseH__477199F1" Association="QRSCS_DatabaseModel.FK__Developme__CaseH__477199F1">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Development_History" EntitySet="Development_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Education__CaseH__5006DFF2" Association="QRSCS_DatabaseModel.FK__Education__CaseH__5006DFF2">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Education_History" EntitySet="Education_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Family_Hi__CaseH__41B8C09B" Association="QRSCS_DatabaseModel.FK__Family_Hi__CaseH__41B8C09B">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Family_History" EntitySet="Family_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medical_H__CaseH__4D2A7347" Association="QRSCS_DatabaseModel.FK__Medical_H__CaseH__4D2A7347">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Medical_History" EntitySet="Medical_History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Particula__CaseH__44952D46" Association="QRSCS_DatabaseModel.FK__Particula__CaseH__44952D46">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Particulars_of_Sibling" EntitySet="Particulars_of_Sibling" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Post_Nata__CaseH__4A4E069C" Association="QRSCS_DatabaseModel.FK__Post_Nata__CaseH__4A4E069C">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Post_Natal" EntitySet="Post_Natal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Psycho_So__CaseH__52E34C9D" Association="QRSCS_DatabaseModel.FK__Psycho_So__CaseH__52E34C9D">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Psycho_Social_Factors" EntitySet="Psycho_Social_Factors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Recommend__CaseH__5B78929E" Association="QRSCS_DatabaseModel.FK__Recommend__CaseH__5B78929E">
+            <End Role="Case_History" EntitySet="Case_History" />
+            <End Role="Recommendation" EntitySet="Recommendations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Speech_As__GR_NO__02FC7413" Association="QRSCS_DatabaseModel.FK__Speech_As__GR_NO__02FC7413">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Speech_Therapy_Assessment" EntitySet="Speech_Therapy_Assessment" />
+          </AssociationSet>
+          <EntitySet Name="Audiology_Assessment" EntityType="QRSCS_DatabaseModel.Audiology_Assessment" />
+          <AssociationSet Name="FK__Audiology__GR_NO__0E04126B" Association="QRSCS_DatabaseModel.FK__Audiology__GR_NO__0E04126B">
+            <End Role="New_Admission" EntitySet="New_Admission" />
+            <End Role="Audiology_Assessment" EntitySet="Audiology_Assessment" />
+          </AssociationSet>
+          <EntitySet Name="Create_Teacher" EntityType="QRSCS_DatabaseModel.Create_Teacher" />
+          <AssociationSet Name="FK__Create_Te__User___2116E6DF" Association="QRSCS_DatabaseModel.FK__Create_Te__User___2116E6DF">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Create_Teacher" EntitySet="Create_Teacher" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="New_Admission">
+          <Key>
+            <PropertyRef Name="GR_NO" />
+          </Key>
+          <Property Name="GR_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date_of_Addmission" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Student_First_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Student_Last_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Class" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dob" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Place_of_Birth" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name_Last_School_Attended" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hobbies" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Father_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NIC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Relationship_with_Student" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Monthly_Income" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Zip_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Residence" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Office" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Disability" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Presenting_Complain" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Update_Date" Type="DateTime" Precision="0" />
+          <Property Name="Updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Case_Hist__GR_NO__1ED998B21" FromRole="New_Admission" ToRole="Case_History" />
+          <NavigationProperty Name="User" Relationship="QRSCS_DatabaseModel.FK__New_Addmi__User___1273C1CD1" FromRole="New_Admission" ToRole="User" />
+          <NavigationProperty Name="Speach_Case_History" Relationship="QRSCS_DatabaseModel.FK__Speach_Ca__GR_NO__628FA4811" FromRole="New_Admission" ToRole="Speach_Case_History" />
+          <NavigationProperty Name="Speech_Therapy_Assessment" Relationship="QRSCS_DatabaseModel.FK__Speech_As__GR_NO__02FC7413" FromRole="New_Admission" ToRole="Speech_Therapy_Assessment" />
+          <NavigationProperty Name="Audiology_Assessment" Relationship="QRSCS_DatabaseModel.FK__Audiology__GR_NO__0E04126B" FromRole="New_Admission" ToRole="Audiology_Assessment" />
+        </EntityType>
+        <Association Name="FK__Case_Hist__GR_NO__1ED998B21">
+          <End Type="QRSCS_DatabaseModel.New_Admission" Role="New_Admission" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Case_History">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__New_Addmi__User___1273C1CD1">
+          <End Type="QRSCS_DatabaseModel.User" Role="User" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.New_Admission" Role="New_Admission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="New_Admission">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Speach_Ca__GR_NO__628FA4811">
+          <End Type="QRSCS_DatabaseModel.New_Admission" Role="New_Admission" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Speach_Case_History" Role="Speach_Case_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Speach_Case_History">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Behavioral_Observation">
+          <Key>
+            <PropertyRef Name="Behavioral_Observation_Answer_ID" />
+          </Key>
+          <Property Name="Behavioral_Observation_Answer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Aggressive" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Restlessness" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Impulsivity" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Distractibility" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Destructive" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Hyper_Active" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Tantrum" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Self_Stimulation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Shyness" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Complain" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Dependence" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Low_Self_Image" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Add_" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Short_Attention_Span" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Poor_Motivation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Isolation_" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Withdrawn" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Asocial" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Behaviora__CaseH__55BFB948" FromRole="Behavioral_Observation" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Conclusion">
+          <Key>
+            <PropertyRef Name="Conclusion_ID" />
+          </Key>
+          <Property Name="Conclusion_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Conclusion_text" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Conclusio__CaseH__589C25F3" FromRole="Conclusion" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Development_History">
+          <Key>
+            <PropertyRef Name="Development_History_ID" />
+          </Key>
+          <Property Name="Development_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Anemia" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Exposure_or_Radiation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Rubella" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Attempted_Abortion" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Mediation_Drugs" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Alcohol" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Tobaco" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Any_Other_Development" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Labor" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Condition_at_birth" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Attendant_During_Labour" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Juandice" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Convulsions" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Cyanotic_Attacks" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Feeding_Difficulty" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Any_Other_Neo_Natal_Period" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Developme__CaseH__477199F1" FromRole="Development_History" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Education_History">
+          <Key>
+            <PropertyRef Name="Education_History_ID" />
+          </Key>
+          <Property Name="Education_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_of_School" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Age_at_First_Admission" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Performance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Duration" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Reason_for_Withdrawal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Education__CaseH__5006DFF2" FromRole="Education_History" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Family_History">
+          <Key>
+            <PropertyRef Name="Family_History_ID" />
+          </Key>
+          <Property Name="Family_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Father_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Age" Type="Int32" Nullable="false" />
+          <Property Name="Father_Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Profession" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Financial_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_General_Health" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Blood_Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Year_of_Marriage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Age_at_the_time_of_Child_Birth" Type="Int32" />
+          <Property Name="Father_Paternal_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Family_System" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Age" Type="Int32" />
+          <Property Name="Mother_Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Profession" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Financial_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_General_Health" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Blood_Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Age_at_the_time_of_Child_Birth" Type="Int32" />
+          <Property Name="Mother_Paternal_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Family_System" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Family_Hi__CaseH__41B8C09B" FromRole="Family_History" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Medical_History">
+          <Key>
+            <PropertyRef Name="Medical_History_ID" />
+          </Key>
+          <Property Name="Medical_History_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Measles_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Whooping_Enough_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Mumps_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Chickenpox_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Pneumonia_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Diphtheria_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Polio_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Influenza_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Typhoid_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Convulsion_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Rheumatic_Fever_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="High_Grade_Fever_Answer" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Measles_Age" Type="Int32" />
+          <Property Name="Whooping_Enough_Age" Type="Int32" />
+          <Property Name="Mumps_Age" Type="Int32" />
+          <Property Name="Chickenpox_Age" Type="Int32" />
+          <Property Name="Pneumonia_Age" Type="Int32" />
+          <Property Name="Diphtheria_Age" Type="Int32" />
+          <Property Name="Polio_Age" Type="Int32" />
+          <Property Name="Influenza_Age" Type="Int32" />
+          <Property Name="Typhoid_Age" Type="Int32" />
+          <Property Name="Convulsion_Age" Type="Int32" />
+          <Property Name="Rheumatic_Fever_Age" Type="Int32" />
+          <Property Name="High_Grade_Fever_Age" Type="Int32" />
+          <Property Name="Any_Other" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Medical_H__CaseH__4D2A7347" FromRole="Medical_History" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Particulars_of_Sibling">
+          <Key>
+            <PropertyRef Name="Particulars_of_Sibling_ID" />
+          </Key>
+          <Property Name="Particulars_of_Sibling_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Number_of_Siblings" Type="Int32" Nullable="false" />
+          <Property Name="Child_Order" Type="Int32" />
+          <Property Name="Any_Disability" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Particula__CaseH__44952D46" FromRole="Particulars_of_Sibling" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Post_Natal">
+          <Key>
+            <PropertyRef Name="Post_Natal_ID" />
+          </Key>
+          <Property Name="Post_Natal_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Birth_Weight_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Smiling_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Cooing_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Neck_Control_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Teething_Months" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sitting_alone_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Crawling_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Walk_alone_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Spoke_1st_Word_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Able_to_Feed_alone_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sphineter_Control_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Puberty_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Meningitis_Encephalitis_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Convulsion_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Head_Injury_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Dehydration_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Severe_Malnutrition_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Any_Other_illness_Months" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Birth_Weight_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Smiling_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Cooing_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Neck_Control_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Teething_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sitting_alone_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Crawling_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Walk_alone_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Spoke_1st_Word_Years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Able_to_Feed_alone_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sphineter_Control_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Meningitis_Encephalitis_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Convulsion_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Head_Injury_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Dehydration_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Severe_Malnutrition_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Post_Nata__CaseH__4A4E069C" FromRole="Post_Natal" ToRole="Case_History" />
+          <Property Name="Puberty_Years" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Any_Other_illness_Years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Psycho_Social_Factors">
+          <Key>
+            <PropertyRef Name="Psycho_Social_Factors_ID" />
+          </Key>
+          <Property Name="Psycho_Social_Factors_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="Friends_Attitude" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sibling_Relationship" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="HomeAndParent_Attitude" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="HobbiesAndInterest" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Psycho_So__CaseH__52E34C9D" FromRole="Psycho_Social_Factors" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="Recommendation_Answer_ID" />
+          </Key>
+          <Property Name="Recommendation_Answer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseHistory_ID" Type="Int32" Nullable="false" />
+          <Property Name="IEP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Physical_Therapy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Occupational_Therapy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Speech_Therapy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Music_Therapy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Vocational_Therapy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Correction_of_Defect" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Glasses" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Heraing_Aid" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Orthopedic_appliance" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Attention_to_home_situation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Parental_Counseling" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Any_other_Home" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Home_Based_Program" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Special_School" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Medication" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Any_other" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Case_History" Relationship="QRSCS_DatabaseModel.FK__Recommend__CaseH__5B78929E" FromRole="Recommendation" ToRole="Case_History" />
+        </EntityType>
+        <EntityType Name="Speech_Therapy_Assessment">
+          <Key>
+            <PropertyRef Name="Speech_Therapy_Assessment_ID" />
+          </Key>
+          <Property Name="Speech_Therapy_Assessment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GR_NO" Type="Int32" Nullable="false" />
+          <Property Name="Speech_Test_Image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="New_Admission" Relationship="QRSCS_DatabaseModel.FK__Speech_As__GR_NO__02FC7413" FromRole="Speech_Therapy_Assessment" ToRole="New_Admission" />
+          <Property Name="Date_of_Assessment" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <Association Name="FK__Behaviora__CaseH__55BFB948">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Behavioral_Observation" Role="Behavioral_Observation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Behavioral_Observation">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Conclusio__CaseH__589C25F3">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Conclusion" Role="Conclusion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Conclusion">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Developme__CaseH__477199F1">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Development_History" Role="Development_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Development_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Education__CaseH__5006DFF2">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Education_History" Role="Education_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Education_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Family_Hi__CaseH__41B8C09B">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Family_History" Role="Family_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Family_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medical_H__CaseH__4D2A7347">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Medical_History" Role="Medical_History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Medical_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Particula__CaseH__44952D46">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Particulars_of_Sibling" Role="Particulars_of_Sibling" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Particulars_of_Sibling">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Post_Nata__CaseH__4A4E069C">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Post_Natal" Role="Post_Natal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Post_Natal">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Psycho_So__CaseH__52E34C9D">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Psycho_Social_Factors" Role="Psycho_Social_Factors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Psycho_Social_Factors">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Recommend__CaseH__5B78929E">
+          <End Type="QRSCS_DatabaseModel.Case_History" Role="Case_History" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Recommendation" Role="Recommendation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Case_History">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Principal>
+            <Dependent Role="Recommendation">
+              <PropertyRef Name="CaseHistory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Speech_As__GR_NO__02FC7413">
+          <End Type="QRSCS_DatabaseModel.New_Admission" Role="New_Admission" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Speech_Therapy_Assessment" Role="Speech_Therapy_Assessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Speech_Therapy_Assessment">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Audiology_Assessment">
+          <Key>
+            <PropertyRef Name="Audiology_Assessment_ID" />
+          </Key>
+          <Property Name="Audiology_Assessment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GR_NO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="New_Admission" Relationship="QRSCS_DatabaseModel.FK__Audiology__GR_NO__0E04126B" FromRole="Audiology_Assessment" ToRole="New_Admission" />
+          <Property Name="Left_Ear_Picture" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Right_Ear_Picture" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date_of_Assessment" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <Association Name="FK__Audiology__GR_NO__0E04126B">
+          <End Type="QRSCS_DatabaseModel.New_Admission" Role="New_Admission" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Audiology_Assessment" Role="Audiology_Assessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="New_Admission">
+              <PropertyRef Name="GR_NO" />
+            </Principal>
+            <Dependent Role="Audiology_Assessment">
+              <PropertyRef Name="GR_NO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Create_Teacher">
+          <Key>
+            <PropertyRef Name="Teacher_ID" />
+          </Key>
+          <Property Name="Teacher_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Teacher_Picture" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Teacher_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NIC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date_of_Birth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Update_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="DateTime" Precision="0" />
+          <Property Name="Creation_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="User" Relationship="QRSCS_DatabaseModel.FK__Create_Te__User___2116E6DF" FromRole="Create_Teacher" ToRole="User" />
+        </EntityType>
+        <Association Name="FK__Create_Te__User___2116E6DF">
+          <End Type="QRSCS_DatabaseModel.User" Role="User" Multiplicity="1" />
+          <End Type="QRSCS_DatabaseModel.Create_Teacher" Role="Create_Teacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Create_Teacher">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QRSCS_DatabaseModelStoreContainer" CdmEntityContainer="QRSCS_DatabaseEntities">
+          <EntitySetMapping Name="Case_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Case_History">
+              <MappingFragment StoreEntitySet="Case_History">
+                <ScalarProperty Name="Date_of_Examination" ColumnName="Date_of_Examination" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Developmental_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Developmental_History">
+              <MappingFragment StoreEntitySet="Developmental_History">
+                <ScalarProperty Name="Developmental_History_ID" ColumnName="Developmental_History_ID" />
+                <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+                <ScalarProperty Name="Use_Single_Word" ColumnName="Use_Single_Word" />
+                <ScalarProperty Name="Combine_Word" ColumnName="Combine_Word" />
+                <ScalarProperty Name="Name_Single_Object" ColumnName="Name_Single_Object" />
+                <ScalarProperty Name="Use_Simple_Sentence" ColumnName="Use_Simple_Sentence" />
+                <ScalarProperty Name="Engage_Conversation" ColumnName="Engage_Conversation" />
+                <ScalarProperty Name="Consistently_Sound" ColumnName="Consistently_Sound" />
+                <ScalarProperty Name="Difficulty_Hearing_Speech" ColumnName="Difficulty_Hearing_Speech" />
+                <ScalarProperty Name="HearingTest_Where_When" ColumnName="HearingTest_Where_When" />
+                <ScalarProperty Name="Diificult_Understand_Speech" ColumnName="Diificult_Understand_Speech" />
+                <ScalarProperty Name="SpecificSounds_Incoorectly" ColumnName="SpecificSounds_Incoorectly" />
+                <ScalarProperty Name="Difficulty_Understanding_Direction" ColumnName="Difficulty_Understanding_Direction" />
+                <ScalarProperty Name="Difficulty_PlayActivities" ColumnName="Difficulty_PlayActivities" />
+                <ScalarProperty Name="Engage_Excussive_Repetition_Word" ColumnName="Engage_Excussive_Repetition_Word" />
+                <ScalarProperty Name="Feeding_Problem" ColumnName="Feeding_Problem" />
+                </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Expressive_Langauage">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Expressive_Langauage">
+              <MappingFragment StoreEntitySet="Expressive_Langauage">
+                <ScalarProperty Name="Expressive_Langauage_ID" ColumnName="Expressive_Langauage_ID" />
+                <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+                <ScalarProperty Name="Babble" ColumnName="Babble" />
+                <ScalarProperty Name="First_Word" ColumnName="First_Word" />
+                <ScalarProperty Name="Combine_2_Word" ColumnName="Combine_2_Word" />
+                <ScalarProperty Name="Complete_Sentence" ColumnName="Complete_Sentence" />
+                <ScalarProperty Name="Gestures" ColumnName="Gestures" />
+                <ScalarProperty Name="Phrases" ColumnName="Phrases" />
+                <ScalarProperty Name="Sing_Language" ColumnName="Sing_Language" />
+                <ScalarProperty Name="Sentence" ColumnName="Sentence" />
+                <ScalarProperty Name="Words" ColumnName="Words" />
+                <ScalarProperty Name="Conversation_Ex_Text" ColumnName="Conversation_Ex_Text" />
+                <ScalarProperty Name="When_Did_Concerned_Child_Speech" ColumnName="When_Did_Concerned_Child_Speech" />
+                <ScalarProperty Name="Caused_Your_Child_Difficulty" ColumnName="Caused_Your_Child_Difficulty" />
+                <ScalarProperty Name="Worse_Better_Overtime" ColumnName="Worse_Better_Overtime" />
+                <ScalarProperty Name="Self_Consious_Speech_Langauge" ColumnName="Self_Consious_Speech_Langauge" />
+                <ScalarProperty Name="Speech_Language_Hearing_Family" ColumnName="Speech_Language_Hearing_Family" />
+                <ScalarProperty Name="Professionals_Seen_Child" ColumnName="Professionals_Seen_Child" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="General_Information">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.General_Information">
+              <MappingFragment StoreEntitySet="General_Information">
+                <ScalarProperty Name="Child_Primary_Caregiver_Language" ColumnName="Child_Primary_Caregiver_Language" />
+                <ScalarProperty Name="General_Information_ID" ColumnName="General_Information_ID" />
+                <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+                <ScalarProperty Name="Today_Date" ColumnName="Today_Date" />
+                <ScalarProperty Name="Child_Primary_Language" ColumnName="Child_Primary_Language" />
+                <ScalarProperty Name="Parent_Primary_Language" ColumnName="Parent_Primary_Language" />
+                <ScalarProperty Name="Live_With_Both_Parents" ColumnName="Live_With_Both_Parents" />
+                <ScalarProperty Name="Child_Primary_Caregiver" ColumnName="Child_Primary_Caregiver" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Receptive_langauge">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Receptive_langauge">
+              <MappingFragment StoreEntitySet="Receptive_langauge">
+                <ScalarProperty Name="Receptive_langauge_ID" ColumnName="Receptive_langauge_ID" />
+                <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+                <ScalarProperty Name="Single_Words" ColumnName="Single_Words" />
+                <ScalarProperty Name="Yes_No_Questions" ColumnName="Yes_No_Questions" />
+                <ScalarProperty Name="Sentences" ColumnName="Sentences" />
+                <ScalarProperty Name="WH_Questions" ColumnName="WH_Questions" />
+                <ScalarProperty Name="Routine_Questions" ColumnName="Routine_Questions" />
+                <ScalarProperty Name="Conversation_Text" ColumnName="Conversation_Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speach_and_Langauge">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Speach_and_Langauge">
+              <MappingFragment StoreEntitySet="Speach_and_Langauge">
+                <ScalarProperty Name="Speach_and_Langauge_ID" ColumnName="Speach_and_Langauge_ID" />
+                <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+                <ScalarProperty Name="Speech_Text" ColumnName="Speech_Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speach_Case_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Speach_Case_History">
+              <MappingFragment StoreEntitySet="Speach_Case_History">
+                <ScalarProperty Name="Speach_Case_History_ID" ColumnName="Speach_Case_History_ID" />
+                <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="NIC" ColumnName="NIC" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="Designation_Role" ColumnName="Designation_Role" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="New_Admission">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.New_Admission">
+              <MappingFragment StoreEntitySet="New_Admission">
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Presenting_Complain" ColumnName="Presenting_Complain" />
+                <ScalarProperty Name="Disability" ColumnName="Disability" />
+                <ScalarProperty Name="Phone_Office" ColumnName="Phone_Office" />
+                <ScalarProperty Name="Phone_Residence" ColumnName="Phone_Residence" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="Monthly_Income" ColumnName="Monthly_Income" />
+                <ScalarProperty Name="Relationship_with_Student" ColumnName="Relationship_with_Student" />
+                <ScalarProperty Name="NIC" ColumnName="NIC" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+                <ScalarProperty Name="Name_Last_School_Attended" ColumnName="Name_Last_School_Attended" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Place_of_Birth" ColumnName="Place_of_Birth" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Student_Last_Name" ColumnName="Student_Last_Name" />
+                <ScalarProperty Name="Student_First_Name" ColumnName="Student_First_Name" />
+                <ScalarProperty Name="Date_of_Addmission" ColumnName="Date_of_Addmission" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Behavioral_Observation">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Behavioral_Observation">
+              <MappingFragment StoreEntitySet="Behavioral_Observation">
+                <ScalarProperty Name="Asocial" ColumnName="Asocial" />
+                <ScalarProperty Name="Withdrawn" ColumnName="Withdrawn" />
+                <ScalarProperty Name="Isolation_" ColumnName="Isolation_" />
+                <ScalarProperty Name="Poor_Motivation" ColumnName="Poor_Motivation" />
+                <ScalarProperty Name="Short_Attention_Span" ColumnName="Short_Attention_Span" />
+                <ScalarProperty Name="Add_" ColumnName="Add_" />
+                <ScalarProperty Name="Low_Self_Image" ColumnName="Low_Self_Image" />
+                <ScalarProperty Name="Dependence" ColumnName="Dependence" />
+                <ScalarProperty Name="Complain" ColumnName="Complain" />
+                <ScalarProperty Name="Shyness" ColumnName="Shyness" />
+                <ScalarProperty Name="Self_Stimulation" ColumnName="Self_Stimulation" />
+                <ScalarProperty Name="Tantrum" ColumnName="Tantrum" />
+                <ScalarProperty Name="Hyper_Active" ColumnName="Hyper_Active" />
+                <ScalarProperty Name="Destructive" ColumnName="Destructive" />
+                <ScalarProperty Name="Distractibility" ColumnName="Distractibility" />
+                <ScalarProperty Name="Impulsivity" ColumnName="Impulsivity" />
+                <ScalarProperty Name="Restlessness" ColumnName="Restlessness" />
+                <ScalarProperty Name="Aggressive" ColumnName="Aggressive" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Behavioral_Observation_Answer_ID" ColumnName="Behavioral_Observation_Answer_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conclusions">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Conclusion">
+              <MappingFragment StoreEntitySet="Conclusion">
+                <ScalarProperty Name="Conclusion_text" ColumnName="Conclusion_text" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Conclusion_ID" ColumnName="Conclusion_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Development_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Development_History">
+              <MappingFragment StoreEntitySet="Development_History">
+                <ScalarProperty Name="Any_Other_Neo_Natal_Period" ColumnName="Any_Other_Neo_Natal_Period" />
+                <ScalarProperty Name="Feeding_Difficulty" ColumnName="Feeding_Difficulty" />
+                <ScalarProperty Name="Cyanotic_Attacks" ColumnName="Cyanotic_Attacks" />
+                <ScalarProperty Name="Convulsions" ColumnName="Convulsions" />
+                <ScalarProperty Name="Juandice" ColumnName="Juandice" />
+                <ScalarProperty Name="Attendant_During_Labour" ColumnName="Attendant_During_Labour" />
+                <ScalarProperty Name="Condition_at_birth" ColumnName="Condition_at_birth" />
+                <ScalarProperty Name="Labor" ColumnName="Labor" />
+                <ScalarProperty Name="Any_Other_Development" ColumnName="Any_Other_Development" />
+                <ScalarProperty Name="Tobaco" ColumnName="Tobaco" />
+                <ScalarProperty Name="Alcohol" ColumnName="Alcohol" />
+                <ScalarProperty Name="Mediation_Drugs" ColumnName="Mediation_Drugs" />
+                <ScalarProperty Name="Attempted_Abortion" ColumnName="Attempted_Abortion" />
+                <ScalarProperty Name="Rubella" ColumnName="Rubella" />
+                <ScalarProperty Name="Exposure_or_Radiation" ColumnName="Exposure_or_Radiation" />
+                <ScalarProperty Name="Anemia" ColumnName="Anemia" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Development_History_ID" ColumnName="Development_History_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Education_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Education_History">
+              <MappingFragment StoreEntitySet="Education_History">
+                <ScalarProperty Name="Reason_for_Withdrawal" ColumnName="Reason_for_Withdrawal" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Performance" ColumnName="Performance" />
+                <ScalarProperty Name="Age_at_First_Admission" ColumnName="Age_at_First_Admission" />
+                <ScalarProperty Name="Name_of_School" ColumnName="Name_of_School" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Education_History_ID" ColumnName="Education_History_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Family_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Family_History">
+              <MappingFragment StoreEntitySet="Family_History">
+                <ScalarProperty Name="Mother_Family_System" ColumnName="Mother_Family_System" />
+                <ScalarProperty Name="Mother_Paternal_Relationship" ColumnName="Mother_Paternal_Relationship" />
+                <ScalarProperty Name="Mother_Age_at_the_time_of_Child_Birth" ColumnName="Mother_Age_at_the_time_of_Child_Birth" />
+                <ScalarProperty Name="Mother_Blood_Group" ColumnName="Mother_Blood_Group" />
+                <ScalarProperty Name="Mother_General_Health" ColumnName="Mother_General_Health" />
+                <ScalarProperty Name="Mother_Financial_Status" ColumnName="Mother_Financial_Status" />
+                <ScalarProperty Name="Mother_Profession" ColumnName="Mother_Profession" />
+                <ScalarProperty Name="Mother_Education" ColumnName="Mother_Education" />
+                <ScalarProperty Name="Mother_Age" ColumnName="Mother_Age" />
+                <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+                <ScalarProperty Name="Father_Family_System" ColumnName="Father_Family_System" />
+                <ScalarProperty Name="Father_Paternal_Relationship" ColumnName="Father_Paternal_Relationship" />
+                <ScalarProperty Name="Father_Age_at_the_time_of_Child_Birth" ColumnName="Father_Age_at_the_time_of_Child_Birth" />
+                <ScalarProperty Name="Year_of_Marriage" ColumnName="Year_of_Marriage" />
+                <ScalarProperty Name="Father_Blood_Group" ColumnName="Father_Blood_Group" />
+                <ScalarProperty Name="Father_General_Health" ColumnName="Father_General_Health" />
+                <ScalarProperty Name="Father_Financial_Status" ColumnName="Father_Financial_Status" />
+                <ScalarProperty Name="Father_Profession" ColumnName="Father_Profession" />
+                <ScalarProperty Name="Father_Education" ColumnName="Father_Education" />
+                <ScalarProperty Name="Father_Age" ColumnName="Father_Age" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Family_History_ID" ColumnName="Family_History_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medical_History">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Medical_History">
+              <MappingFragment StoreEntitySet="Medical_History">
+                <ScalarProperty Name="Any_Other" ColumnName="Any_Other" />
+                <ScalarProperty Name="High_Grade_Fever_Age" ColumnName="High_Grade_Fever_Age" />
+                <ScalarProperty Name="Rheumatic_Fever_Age" ColumnName="Rheumatic_Fever_Age" />
+                <ScalarProperty Name="Convulsion_Age" ColumnName="Convulsion_Age" />
+                <ScalarProperty Name="Typhoid_Age" ColumnName="Typhoid_Age" />
+                <ScalarProperty Name="Influenza_Age" ColumnName="Influenza_Age" />
+                <ScalarProperty Name="Polio_Age" ColumnName="Polio_Age" />
+                <ScalarProperty Name="Diphtheria_Age" ColumnName="Diphtheria_Age" />
+                <ScalarProperty Name="Pneumonia_Age" ColumnName="Pneumonia_Age" />
+                <ScalarProperty Name="Chickenpox_Age" ColumnName="Chickenpox_Age" />
+                <ScalarProperty Name="Mumps_Age" ColumnName="Mumps_Age" />
+                <ScalarProperty Name="Whooping_Enough_Age" ColumnName="Whooping_Enough_Age" />
+                <ScalarProperty Name="Measles_Age" ColumnName="Measles_Age" />
+                <ScalarProperty Name="High_Grade_Fever_Answer" ColumnName="High_Grade_Fever_Answer" />
+                <ScalarProperty Name="Rheumatic_Fever_Answer" ColumnName="Rheumatic_Fever_Answer" />
+                <ScalarProperty Name="Convulsion_Answer" ColumnName="Convulsion_Answer" />
+                <ScalarProperty Name="Typhoid_Answer" ColumnName="Typhoid_Answer" />
+                <ScalarProperty Name="Influenza_Answer" ColumnName="Influenza_Answer" />
+                <ScalarProperty Name="Polio_Answer" ColumnName="Polio_Answer" />
+                <ScalarProperty Name="Diphtheria_Answer" ColumnName="Diphtheria_Answer" />
+                <ScalarProperty Name="Pneumonia_Answer" ColumnName="Pneumonia_Answer" />
+                <ScalarProperty Name="Chickenpox_Answer" ColumnName="Chickenpox_Answer" />
+                <ScalarProperty Name="Mumps_Answer" ColumnName="Mumps_Answer" />
+                <ScalarProperty Name="Whooping_Enough_Answer" ColumnName="Whooping_Enough_Answer" />
+                <ScalarProperty Name="Measles_Answer" ColumnName="Measles_Answer" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Medical_History_ID" ColumnName="Medical_History_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Particulars_of_Sibling">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Particulars_of_Sibling">
+              <MappingFragment StoreEntitySet="Particulars_of_Sibling">
+                <ScalarProperty Name="Any_Disability" ColumnName="Any_Disability" />
+                <ScalarProperty Name="Child_Order" ColumnName="Child_Order" />
+                <ScalarProperty Name="Number_of_Siblings" ColumnName="Number_of_Siblings" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Particulars_of_Sibling_ID" ColumnName="Particulars_of_Sibling_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Post_Natal">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Post_Natal">
+              <MappingFragment StoreEntitySet="Post_Natal">
+                <ScalarProperty Name="Any_Other_illness_Years" ColumnName="Any_Other_illness_Years" />
+                <ScalarProperty Name="Puberty_Years" ColumnName="Puberty_Years" />
+                <ScalarProperty Name="Severe_Malnutrition_Years" ColumnName="Severe_Malnutrition_Years" />
+                <ScalarProperty Name="Dehydration_Years" ColumnName="Dehydration_Years" />
+                <ScalarProperty Name="Head_Injury_Years" ColumnName="Head_Injury_Years" />
+                <ScalarProperty Name="Convulsion_Years" ColumnName="Convulsion_Years" />
+                <ScalarProperty Name="Meningitis_Encephalitis_Years" ColumnName="Meningitis_Encephalitis_Years" />
+                <ScalarProperty Name="Sphineter_Control_Years" ColumnName="Sphineter_Control_Years" />
+                <ScalarProperty Name="Able_to_Feed_alone_Years" ColumnName="Able_to_Feed_alone_Years" />
+                <ScalarProperty Name="Spoke_1st_Word_Years" ColumnName="Spoke_1st_Word_Years" />
+                <ScalarProperty Name="Walk_alone_Years" ColumnName="Walk_alone_Years" />
+                <ScalarProperty Name="Crawling_Years" ColumnName="Crawling_Years" />
+                <ScalarProperty Name="Sitting_alone_Years" ColumnName="Sitting_alone_Years" />
+                <ScalarProperty Name="Teething_Years" ColumnName="Teething_Years" />
+                <ScalarProperty Name="Neck_Control_Years" ColumnName="Neck_Control_Years" />
+                <ScalarProperty Name="Cooing_Years" ColumnName="Cooing_Years" />
+                <ScalarProperty Name="Smiling_Years" ColumnName="Smiling_Years" />
+                <ScalarProperty Name="Birth_Weight_Years" ColumnName="Birth_Weight_Years" />
+                <ScalarProperty Name="Any_Other_illness_Months" ColumnName="Any_Other_illness_Months" />
+                <ScalarProperty Name="Severe_Malnutrition_Months" ColumnName="Severe_Malnutrition_Months" />
+                <ScalarProperty Name="Dehydration_Months" ColumnName="Dehydration_Months" />
+                <ScalarProperty Name="Head_Injury_Months" ColumnName="Head_Injury_Months" />
+                <ScalarProperty Name="Convulsion_Months" ColumnName="Convulsion_Months" />
+                <ScalarProperty Name="Meningitis_Encephalitis_Months" ColumnName="Meningitis_Encephalitis_Months" />
+                <ScalarProperty Name="Puberty_Months" ColumnName="Puberty_Months" />
+                <ScalarProperty Name="Sphineter_Control_Months" ColumnName="Sphineter_Control_Months" />
+                <ScalarProperty Name="Able_to_Feed_alone_Months" ColumnName="Able_to_Feed_alone_Months" />
+                <ScalarProperty Name="Spoke_1st_Word_Months" ColumnName="Spoke_1st_Word_Months" />
+                <ScalarProperty Name="Walk_alone_Months" ColumnName="Walk_alone_Months" />
+                <ScalarProperty Name="Crawling_Months" ColumnName="Crawling_Months" />
+                <ScalarProperty Name="Sitting_alone_Months" ColumnName="Sitting_alone_Months" />
+                <ScalarProperty Name="Teething_Months" ColumnName="Teething_Months" />
+                <ScalarProperty Name="Neck_Control_Months" ColumnName="Neck_Control_Months" />
+                <ScalarProperty Name="Cooing_Months" ColumnName="Cooing_Months" />
+                <ScalarProperty Name="Smiling_Months" ColumnName="Smiling_Months" />
+                <ScalarProperty Name="Birth_Weight_Months" ColumnName="Birth_Weight_Months" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Post_Natal_ID" ColumnName="Post_Natal_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Psycho_Social_Factors">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Psycho_Social_Factors">
+              <MappingFragment StoreEntitySet="Psycho_Social_Factors">
+                <ScalarProperty Name="HobbiesAndInterest" ColumnName="HobbiesAndInterest" />
+                <ScalarProperty Name="HomeAndParent_Attitude" ColumnName="HomeAndParent_Attitude" />
+                <ScalarProperty Name="Sibling_Relationship" ColumnName="Sibling_Relationship" />
+                <ScalarProperty Name="Friends_Attitude" ColumnName="Friends_Attitude" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Psycho_Social_Factors_ID" ColumnName="Psycho_Social_Factors_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recommendations">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Recommendation">
+              <MappingFragment StoreEntitySet="Recommendation">
+                <ScalarProperty Name="Any_other" ColumnName="Any_other" />
+                <ScalarProperty Name="Medication" ColumnName="Medication" />
+                <ScalarProperty Name="Special_School" ColumnName="Special_School" />
+                <ScalarProperty Name="Home_Based_Program" ColumnName="Home_Based_Program" />
+                <ScalarProperty Name="Any_other_Home" ColumnName="Any_other_Home" />
+                <ScalarProperty Name="Parental_Counseling" ColumnName="Parental_Counseling" />
+                <ScalarProperty Name="Attention_to_home_situation" ColumnName="Attention_to_home_situation" />
+                <ScalarProperty Name="Orthopedic_appliance" ColumnName="Orthopedic_appliance" />
+                <ScalarProperty Name="Heraing_Aid" ColumnName="Heraing_Aid" />
+                <ScalarProperty Name="Glasses" ColumnName="Glasses" />
+                <ScalarProperty Name="Correction_of_Defect" ColumnName="Correction_of_Defect" />
+                <ScalarProperty Name="Vocational_Therapy" ColumnName="Vocational_Therapy" />
+                <ScalarProperty Name="Music_Therapy" ColumnName="Music_Therapy" />
+                <ScalarProperty Name="Speech_Therapy" ColumnName="Speech_Therapy" />
+                <ScalarProperty Name="Occupational_Therapy" ColumnName="Occupational_Therapy" />
+                <ScalarProperty Name="Physical_Therapy" ColumnName="Physical_Therapy" />
+                <ScalarProperty Name="IEP" ColumnName="IEP" />
+                <ScalarProperty Name="CaseHistory_ID" ColumnName="CaseHistory_ID" />
+                <ScalarProperty Name="Recommendation_Answer_ID" ColumnName="Recommendation_Answer_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speech_Therapy_Assessment">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Speech_Therapy_Assessment">
+              <MappingFragment StoreEntitySet="Speech_Therapy_Assessment">
+                <ScalarProperty Name="Date_of_Assessment" ColumnName="Date_of_Assessment" />
+                <ScalarProperty Name="Speech_Test_Image" ColumnName="Speech_Test_Image" />
+                <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+                <ScalarProperty Name="Speech_Therapy_Assessment_ID" ColumnName="Speech_Therapy_Assessment_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Audiology_Assessment">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Audiology_Assessment">
+              <MappingFragment StoreEntitySet="Audiology_Assessment">
+                <ScalarProperty Name="Date_of_Assessment" ColumnName="Date_of_Assessment" />
+                <ScalarProperty Name="Right_Ear_Picture" ColumnName="Right_Ear_Picture" />
+                <ScalarProperty Name="Left_Ear_Picture" ColumnName="Left_Ear_Picture" />
+                <ScalarProperty Name="GR_NO" ColumnName="GR_NO" />
+                <ScalarProperty Name="Audiology_Assessment_ID" ColumnName="Audiology_Assessment_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Create_Teacher">
+            <EntityTypeMapping TypeName="QRSCS_DatabaseModel.Create_Teacher">
+              <MappingFragment StoreEntitySet="Create_Teacher">
+                <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Date_of_Birth" ColumnName="Date_of_Birth" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="NIC" ColumnName="NIC" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Teacher_Name" ColumnName="Teacher_Name" />
+                <ScalarProperty Name="Teacher_Picture" ColumnName="Teacher_Picture" />
+                <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

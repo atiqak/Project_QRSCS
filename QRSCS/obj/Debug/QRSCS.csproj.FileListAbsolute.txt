@@ -1,0 +1,494 @@
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\QRSCS.dll.config
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\QRSCS.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\QRSCS.pdb
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\csc.exe
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\csc.rsp
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\csi.exe
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\csi.exe.config
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\csi.rsp
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Console.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.IO.Compression.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Net.Http.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Net.Sockets.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.ValueTuple.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Xml.XPath.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\vbc.exe
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Razor.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\WebGrease.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.Razor.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CopyComplete
+C:\Users\HP\source\repos\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\EntityFramework.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\EntityFramework.xml
+C:\Users\HP\source\repos\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\QRSCS.dll.config
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\QRSCS.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\QRSCS.pdb
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\csc.exe
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\csc.rsp
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\csi.exe
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\csi.rsp
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\vbc.exe
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\EntityFramework.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Razor.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\WebGrease.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\EntityFramework.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.Razor.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CopyComplete
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+C:\Users\HP\Downloads\QRSCS\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\QRSCS.dll.config
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\QRSCS.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\csc.exe
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\csc.rsp
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\csi.exe
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\csi.rsp
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\vbc.exe
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\EntityFramework.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Razor.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\WebGrease.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\EntityFramework.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.Razor.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Desktop\repos\QRSCS\QRSCS\obj\Debug\QRSCS.csprojResolveAssemblyReference.cache
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\QRSCS.dll.config
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\QRSCS.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\QRSCS.pdb
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\csc.exe
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\csc.rsp
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\csi.exe
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\csi.rsp
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\vbc.exe
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\EntityFramework.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Razor.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\WebGrease.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\EntityFramework.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.Razor.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CoreCompileInputs.cache
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CopyComplete
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+E:\Paf kiet\8th Semester\FYP 1\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.AssemblyReference.cache
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\QRSCS.dll.config
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\QRSCS.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\csc.exe
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\csc.rsp
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\csi.exe
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\csi.rsp
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\vbc.exe
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\EntityFramework.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Razor.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\WebGrease.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\EntityFramework.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.Razor.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+C:\Users\Muhammad Axib Ali\Downloads\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+G:\QRSCS\QRSCS\bin\QRSCS.dll.config
+G:\QRSCS\QRSCS\bin\QRSCS.dll
+G:\QRSCS\QRSCS\bin\QRSCS.pdb
+G:\QRSCS\QRSCS\bin\roslyn\csc.exe
+G:\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+G:\QRSCS\QRSCS\bin\roslyn\csc.rsp
+G:\QRSCS\QRSCS\bin\roslyn\csi.exe
+G:\QRSCS\QRSCS\bin\roslyn\csi.rsp
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+G:\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+G:\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+G:\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+G:\QRSCS\QRSCS\bin\roslyn\vbc.exe
+G:\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+G:\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+G:\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+G:\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+G:\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+G:\QRSCS\QRSCS\bin\EntityFramework.dll
+G:\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+G:\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+G:\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+G:\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+G:\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+G:\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+G:\QRSCS\QRSCS\bin\System.Web.Razor.dll
+G:\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+G:\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+G:\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+G:\QRSCS\QRSCS\bin\WebGrease.dll
+G:\QRSCS\QRSCS\bin\EntityFramework.xml
+G:\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+G:\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+G:\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+G:\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+G:\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+G:\QRSCS\QRSCS\bin\System.Web.Razor.xml
+G:\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+G:\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+G:\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+G:\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+G:\QRSCS\QRSCS\obj\Debug\QRSCS.csprojResolveAssemblyReference.cache
+G:\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+G:\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\QRSCS.dll.config
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\QRSCS.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\csc.exe
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\csc.rsp
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\csi.exe
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\csi.rsp
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\vbc.exe
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\EntityFramework.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Razor.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\WebGrease.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\EntityFramework.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.Razor.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.pdb
+C:\Users\Muhammad Axib Ali\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.csprojResolveAssemblyReference.cache
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\QRSCS.dll.config
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\QRSCS.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\QRSCS.pdb
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\csc.exe
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\csc.exe.config
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\csc.rsp
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\csi.exe
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\csi.rsp
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\System.AppContext.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\vbc.exe
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\vbc.exe.config
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\vbc.rsp
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Antlr3.Runtime.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\EntityFramework.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\EntityFramework.SqlServer.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Newtonsoft.Json.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Helpers.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Mvc.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Optimization.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Razor.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\WebGrease.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\EntityFramework.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\EntityFramework.SqlServer.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Newtonsoft.Json.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Helpers.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Mvc.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Optimization.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.Razor.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\System.Web.WebPages.Razor.xml
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\bin\Antlr3.Runtime.pdb
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.csprojAssemblyReference.cache
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CoreCompileInputs.cache
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.csproj.CopyComplete
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.dll
+C:\Users\atiqa\OneDrive\Desktop\QRSCS\QRSCS\obj\Debug\QRSCS.pdb

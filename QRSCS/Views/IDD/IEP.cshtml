@@ -1,0 +1,1006 @@
+﻿@model QRSCS.Models.CaseHistoryModelDTO
+@{
+    ViewBag.Title = "IEP Form";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link type="text/css" rel="stylesheet" href="~/Content/adminassets/css/style.css">
+
+<style>
+    fieldset {
+        display: none;
+    }
+
+    #first {
+        display: block;
+    }
+
+    input[type=submit], input[type=button] {
+        width: 120px;
+        margin: 15px 25px;
+        padding: 5px;
+        height: 40px;
+        background-color: #2e69ff;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .prevbut {
+        background-color: #e5e7f2 !important;
+        color: black !important;
+    }
+
+        .prevbut:hover {
+            background-color: #b8b8b8 !important;
+        }
+</style>
+
+
+<div class="container-fluid">
+    <div class="db-breadcrumb">
+        <h4 class="breadcrumb-title">Individualized E-Plan </h4>
+        <ul class="db-breadcrumb-list">
+            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li>Individualized E-Plan </li>
+        </ul>
+    </div>
+    <div class="row">
+        <!-- Your Profile Views Chart -->
+        <div class="col-lg-12 m-b30">
+            <div class="widget-box">
+                <div class="widget-inner">
+                    <div id="calendar">
+                        <div role="main" class="form-all">
+                            <style>
+                                .form-all:before {
+                                    background: none;
+                                }
+                            </style>
+                            @*GENERAL INFORMATION*@
+                            <fieldset id="first">
+                                <ul class="form-section page-section">
+                                    <li id="cid_43" class="form-input-wide" data-type="control_head">
+                                        <div class="form-header-group  header-large">
+                                            <div class="header-text httac htvam">
+                                                <h1 id="header_43" class="form-header" data-component="header">
+                                                    Individualized E-Plan
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                        <div class="form-header-group  header-small">
+                                            <div class="header-text httac htvam">
+                                                <h3 id="header_65" class="form-header" data-component="header">
+                                                    GENERAL INFORMATION
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <div style="display:flex; flex-flow: row wrap;">
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                            <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                                Student First Name
+                                                <span class="form-required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                                @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                            </div>
+
+                                            <div style="display:flex; flex-flow: row wrap;">
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                            <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                                Student Last Name
+                                                <span class="form-required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                                @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                            </div>
+                                        </li>
+
+                                    </div>
+                                    <div style="display:flex; flex-flow: row wrap;">
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                            <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                                Age
+                                                <span class="form-required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                                @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                            </div>
+                                        </li>
+                                        <li class="form-line form-line-column form-col-13" data-type="control_dropdown" id="id_41">
+                                            <label class="form-label form-label-top form-label-auto" id="label_41" for="input_41">
+                                                Gender
+                                                <span class="form-required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div id="cid_41" class="form-input-wide" data-layout="half">
+                                                @Html.DropDownListFor(x => x.FamilyHistory.Father_Blood_Group, new List<SelectListItem>
+                                                   { new SelectListItem() { Text = "Please Select" ,Value=""},
+                                                     new SelectListItem() { Text = "Male",Value="Male" },
+                                                     new SelectListItem() { Text = "Female",Value="Female" },
+                                                }, new { id = "input_41", name = "q41_typeA41", @Class = "form-dropdown validate[required]", style = "width:310px", datacomponent = "dropdown" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Blood_Group, null, new { style = "color:red" })
+                                            </div>
+                                        </li>
+
+
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_28">
+                                            <label class="form-label form-label-top form-label-auto" id="label_28" for="input_28">Class </label>
+                                            <div id="cid_28" class="form-input-wide" data-layout="half">
+                                                @Html.TextBoxFor(x => x.FamilyHistory.Mother_Name, null, new { id = "input_28", name = "q28_motherName", @Class = "form-textbox validate[Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Mother_Name, null, new { style = "color:red" })
+                                            </div>
+                                        </li>
+
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_28">
+                                            <label class="form-label form-label-top form-label-auto" id="label_28" for="input_28">Parent's / Guardian Phone # </label>
+                                            <div id="cid_28" class="form-input-wide" data-layout="half">
+                                                @Html.TextBoxFor(x => x.FamilyHistory.Mother_Name, null, new { id = "input_28", name = "q28_motherName", @Class = "form-textbox validate[Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Mother_Name, null, new { style = "color:red" })
+                                            </div>
+                                        </li>
+
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_28">
+                                            <label class="form-label form-label-top form-label-auto" id="label_28" for="input_28">Diagnosis</label>
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Mother_Name, null, new { id = "input_28", name = "q28_motherName", @Class = "form-textbox validate[Alphabetic, minCharLimit]", maxLength = "30", placeholder = "Ex:HI", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Mother_Name, null, new { style = "color:red" })
+
+                                        </li>
+                                    </div>
+
+                                    <div style="width: 100%;">
+                                        <input id="next_btn1" onclick="next_step1()" type="button" value="Next" style="float: right; right: 0;">
+                                    </div>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            @*MEETING INFORMATION*@
+                            <fieldset id="second">
+                                <!--<ul class="form-section page-section" style="display:none;">-->
+                                <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                    <div class="form-header-group  header-small">
+                                        <div class="header-text httac htvam">
+                                            <h3 id="header_65" class="form-header" data-component="header">
+                                                MEETING INFORMATION
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-13" data-type="control_dropdown" id="id_41">
+                                        <label class="form-label form-label-top form-label-auto" id="label_41" for="input_41">
+                                            Meeting Information
+                                            <span class="form-required">
+                                                *
+                                            </span>
+                                        </label>
+                                        <div id="cid_41" class="form-input-wide" data-layout="half">
+                                            @Html.DropDownListFor(x => x.FamilyHistory.Father_Blood_Group, new List<SelectListItem>
+                                               { new SelectListItem() { Text = "Please Select" ,Value=""},
+                                                 new SelectListItem() { Text = "Initial IEP",Value="Initial IEP" },
+                                                 new SelectListItem() { Text = "Annual Review",Value="Annual Review" },
+                                                 new SelectListItem() { Text = "Review other than Annual Review",Value="Review other than Annual Review" },
+                                                 new SelectListItem() { Text = "Amendment",Value="Amendment" },
+                                            }, new { id = "input_41", name = "q41_typeA41", @Class = "form-dropdown validate[required]", style = "width:310px", datacomponent = "dropdown" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Blood_Group, null, new { style = "color:red" })
+                                        </div>
+                                    </li>
+
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_28">
+                                        <label class="form-label form-label-top form-label-auto" id="label_28" for="input_28">Language used for communicating with child</label>
+                                        @Html.TextBoxFor(x => x.FamilyHistory.Mother_Name, null, new { id = "input_28", name = "q28_motherName", @Class = "form-textbox validate[Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                        @Html.ValidationMessageFor(x => x.FamilyHistory.Mother_Name, null, new { style = "color:red" })
+
+                                    </li>
+
+
+                                </div>
+                                <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                    <div class="form-header-group  header-small">
+                                        <div class="header-text httac htvam">
+                                            <h3 id="header_65" class="form-header" data-component="header">
+                                                PRESENT LEVEL OF PERFORMANCE
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Physical Development
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Communication
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Self-help Skills
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Cognition
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Socialization
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Functional Academic
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Academic Performance
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Pre-vocational / Vocational Skills
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            General / Others
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+                                    </li>
+
+
+                                    <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                        <div class="form-header-group  header-small">
+                                            <div class="header-text httac htvam">
+                                                <h3 id="header_65" class="form-header" data-component="header">
+                                                    SPECIAL INSTRUCTIONAL INFORMATION
+                                                </h3>
+                                                <div id="subHeader_43" class="form-subHeader">
+                                                    Items checked 'YES' must be addressed in this IEP:
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <li class="form-line jf-required" data-type="control_radio" id="id_3">
+                                        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3">
+                                            Does the student exhibit behaviors which impede his/her learning of others?
+                                        </label>
+                                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                                            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_3" data-component="radio">
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "Yes", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_0", name = "q3_typeA", value = "Labor", required = "" })
+                                                    <label id="label_input_3_0" for="input_3_0"> Yes </label>
+                                                </span>
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "No", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_1", name = "q3_typeA", value = "Normal", required = "" })
+                                                    <label id="label_input_3_1" for="input_3_1"> No </label>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </li>
+
+                                    <li class="form-line jf-required" data-type="control_radio" id="id_3">
+                                        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3">
+                                            Does the student have limited English proficiency?
+                                        </label>
+                                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                                            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_3" data-component="radio">
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "Yes", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_0", name = "q3_typeA", value = "Labor", required = "" })
+                                                    <label id="label_input_3_0" for="input_3_0"> Yes </label>
+                                                </span>
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "No", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_1", name = "q3_typeA", value = "Normal", required = "" })
+                                                    <label id="label_input_3_1" for="input_3_1"> No </label>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </li>
+
+                                    <li class="form-line jf-required" data-type="control_radio" id="id_3">
+                                        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3">
+                                            Does the student require instruction in Braille and the use of Braille?
+                                        </label>
+                                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                                            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_3" data-component="radio">
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "Yes", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_0", name = "q3_typeA", value = "Labor", required = "" })
+                                                    <label id="label_input_3_0" for="input_3_0"> Yes </label>
+                                                </span>
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "No", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_1", name = "q3_typeA", value = "Normal", required = "" })
+                                                    <label id="label_input_3_1" for="input_3_1"> No </label>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </li>
+                                    <li class="form-line jf-required" data-type="control_radio" id="id_3">
+                                        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3">
+                                            Does the student have communication needs (deaf or hearing impaired only)?
+                                        </label>
+                                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                                            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_3" data-component="radio">
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "Yes", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_0", name = "q3_typeA", value = "Labor", required = "" })
+                                                    <label id="label_input_3_0" for="input_3_0"> Yes </label>
+                                                </span>
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "No", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_1", name = "q3_typeA", value = "Normal", required = "" })
+                                                    <label id="label_input_3_1" for="input_3_1"> No </label>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </li>
+                                    <li class="form-line jf-required" data-type="control_radio" id="id_3">
+                                        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3">
+                                            Does the student need assistive technology devices and/or services?
+                                        </label>
+                                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                                            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_3" data-component="radio">
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "Yes", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_0", name = "q3_typeA", value = "Labor", required = "" })
+                                                    <label id="label_input_3_0" for="input_3_0"> Yes </label>
+                                                </span>
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "No", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_1", name = "q3_typeA", value = "Normal", required = "" })
+                                                    <label id="label_input_3_1" for="input_3_1"> No </label>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </li>
+
+                                    <li class="form-line jf-required" data-type="control_radio" id="id_3">
+                                        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3">
+                                            Is the student working toward alternate achievement  standards assessed via alternate assessments?
+                                        </label>
+                                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                                            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_3" data-component="radio">
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "Yes", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_0", name = "q3_typeA", value = "Labor", required = "" })
+                                                    <label id="label_input_3_0" for="input_3_0"> Yes </label>
+                                                </span>
+                                                <span class="form-radio-item">
+                                                    <span class="dragger-item">
+                                                    </span>
+                                                    @Html.RadioButtonFor(x => x.DevelopmentHistory.Labor, "No", new { @class = "form-radio validate[required]", type = "radio", id = "input_3_1", name = "q3_typeA", value = "Normal", required = "" })
+                                                    <label id="label_input_3_1" for="input_3_1"> No </label>
+                                                </span>
+                                            </div>
+
+                                            <div style="width: 100%;">
+                                                <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous" class="prevbut">
+                                                <input id="next_btn1" onclick="next_step2()" type="button" value="Next" style="float: right; right: 0;">
+                                            </div>
+                                    </li>
+
+                            </fieldset>
+
+
+
+                            @*MEASURABLE ANNUAL GOALS*@
+                            <fieldset id="third">
+                                <!--    <ul class="form-section page-section" style="display:none;"> -->
+                                <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                    <div class="form-header-group  header-small">
+                                        <div class="header-text httac htvam">
+                                            <h3 id="header_65" class="form-header" data-component="header">
+                                                MEASURABLE ANNUAL GOALS
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Area
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                    <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                        <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                            Annual Goal
+                                        </label>
+                                        <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                            @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                            @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                        </div>
+
+                                    </li>
+
+                                    <div id="cid_25" class="form-input-wide jf-required" data-layout="full">
+                                        <table summary="" aria-labelledby="label_25" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix" data-dynamic="true">
+                                            <tr class="form-matrix-tr form-matrix-header-tr">
+                                                <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
+                                                    <label id="label_25_col_0"> Goals</label>
+                                                </th>
+                                                <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                    <label id="label_25_col_1"> Provider </label>
+                                                </th>
+                                                <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                    <label id="label_25_col_1"> Evaluation Method </label>
+                                                </th>
+
+                                                <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                    <label id="label_25_col_1"> Initial Date </label>
+                                                </th>
+                                                <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                    <label id="label_25_col_1"> Check Date </label>
+                                                </th>
+                                                <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                    <label id="label_25_col_1"> Mastery Date </label>
+                                                </th>
+                                            </tr>
+                                            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_25 label_25_row_0">
+
+                                                <td class="form-matrix-values">
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                </td>
+
+
+                                                <td class="form-matrix-values">
+                                                    @Html.DropDownListFor(x => x.MedicalHistory.Whooping_Enough_Answer, new List<SelectListItem>
+                                                      { new SelectListItem() { Text = "Select any",Value="" },
+                                                        new SelectListItem() { Text = "Special Education" },
+                                                        new SelectListItem() { Text = "SLP" },
+                                                        new SelectListItem() { Text = "OT" },
+                                                        new SelectListItem() { Text = "BT" },
+                                                        new SelectListItem() { Text = "PT" },
+                                                      }, new { id = "input_25_1_0", name = "", @Class = "form-dropdown validate[required, requireEveryRow]", style = "width:310px", datacomponent = "dropdown" })
+                                                    @Html.ValidationMessageFor(x => x.MedicalHistory.Whooping_Enough_Answer, null, new { style = "color:red" })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Others", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                </td>
+
+
+                                                <td class="form-matrix-values">
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Data Collection", type = "text", size = "2", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Teacher/Text Test", type = "text", size = "2", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Work Samples", type = "text", size = "2", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Classroom Observation", type = "text", size = "2", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Grades", type = "text", size = "2", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Other", type = "text", size = "2", })
+                                                    @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                </td>
+
+
+                                                <td class="form-matrix-values">
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                </td>
+
+                                                <td class="form-matrix-values">
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                </td>
+
+
+                                                <td class="form-matrix-values">
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                    @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                </td>
+
+                                        </table>
+
+                                        <div style="display:flex; flex-flow: row wrap;">
+                                            <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                                <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                                    Area
+                                                </label>
+                                                <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                                    @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                    @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                                </div>
+
+
+                                                <div style="display:flex; flex-flow: row wrap;">
+                                            <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                                <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                                    Annual Goal
+                                                </label>
+                                                <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                                    @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                    @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                                </div>
+
+                                            </li>
+
+                                            <div id="cid_25" class="form-input-wide jf-required" data-layout="full">
+                                                <table summary="" aria-labelledby="label_25" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix" data-dynamic="true">
+                                                    <tr class="form-matrix-tr form-matrix-header-tr">
+                                                        <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
+                                                            <label id="label_25_col_0"> Goals</label>
+                                                        </th>
+                                                        <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                            <label id="label_25_col_1"> Provider </label>
+                                                        </th>
+                                                        <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                            <label id="label_25_col_1"> Evaluation Method </label>
+                                                        </th>
+
+                                                        <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                            <label id="label_25_col_1"> Initial Date </label>
+                                                        </th>
+                                                        <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                            <label id="label_25_col_1"> Check Date </label>
+                                                        </th>
+                                                        <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                            <label id="label_25_col_1"> Mastery Date </label>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_25 label_25_row_0">
+
+                                                        <td class="form-matrix-values">
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                        </td>
+
+
+                                                        <td class="form-matrix-values">
+                                                            @Html.DropDownListFor(x => x.MedicalHistory.Whooping_Enough_Answer, new List<SelectListItem>
+                                                              { new SelectListItem() { Text = "Select any",Value="" },
+                                                                new SelectListItem() { Text = "Special Education" },
+                                                                new SelectListItem() { Text = "SLP" },
+                                                                new SelectListItem() { Text = "OT" },
+                                                                new SelectListItem() { Text = "BT" },
+                                                                new SelectListItem() { Text = "PT" },
+                                                              }, new { id = "input_25_1_0", name = "", @Class = "form-dropdown validate[required, requireEveryRow]", style = "width:310px", datacomponent = "dropdown" })
+                                                            @Html.ValidationMessageFor(x => x.MedicalHistory.Whooping_Enough_Answer, null, new { style = "color:red" })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Others", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "", size = "10", })
+                                                        </td>
+
+
+                                                        <td class="form-matrix-values">
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Data Collection", type = "text", size = "2", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Teacher/Text Test", type = "text", size = "2", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Work Samples", type = "text", size = "2", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Classroom Observation", type = "text", size = "2", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Grades", type = "text", size = "2", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "Other", type = "text", size = "2", })
+                                                            @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                        </td>
+
+
+                                                        <td class="form-matrix-values">
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                        </td>
+
+                                                        <td class="form-matrix-values">
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                        </td>
+
+
+                                                        <td class="form-matrix-values">
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                            @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                                        </td>
+
+                                                </table>
+
+                                                <div style="width: 100%;">
+                                                    <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous" class="prevbut">
+                                                    <input id="next_btn1" onclick="next_step3()" type="button" value="Next" style="float: right; right: 0;">
+                                                </div>
+                                                </li>
+
+                            </fieldset>
+
+                            @*SUPLEMENTARY AIDS AND RELATED SERVICES*@
+                            <fieldset id="fourth">
+                                <!--    <ul class="form-section page-section" style="display:none;"> -->
+                                <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                    <div class="form-header-group  header-small">
+                                        <div class="header-text httac htvam">
+                                            <h3 id="header_65" class="form-header" data-component="header">
+                                                SUPLEMENTARY AIDS & RELATED SERVICES
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div id="cid_25" class="form-input-wide jf-required" data-layout="full">
+                                    <table summary="" aria-labelledby="label_25" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix" data-dynamic="true">
+                                        <tr class="form-matrix-tr form-matrix-header-tr">
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
+                                                <label id="label_25_col_0"> Services / Related Services </label>
+                                            </th>
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                <label id="label_25_col_1"> Provider Name </label>
+                                            </th>
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                <label id="label_25_col_1"> Hours per week</label>
+                                            </th>
+
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                <label id="label_25_col_1"> Location </label>
+                                            </th>
+                                        </tr>
+                                        <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_25 label_25_row_0">
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+                                    </table>
+                                    <div style="display:flex; flex-flow: row wrap;">
+                                        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+                                            <label class="form-label form-label-top form-label-auto" id="label_27" for="input_27">
+                                                Aids/equipment/program modifications need to attain annual goals:
+                                            </label>
+                                            <div id="cid_27" class="form-input-wide jf-required" data-layout="half">
+                                                @Html.TextBoxFor(x => x.FamilyHistory.Father_Name, null, new { id = "input_27", name = "q27_typeA", @Class = "form-textbox validate[required, Alphabetic, minCharLimit]", maxLength = "30", placeholder = "", type = "text", size = "10" })
+                                                @Html.ValidationMessageFor(x => x.FamilyHistory.Father_Name, null, new { style = "color:red" })
+                                            </div>
+
+                                            @*RECOMMENDED INSTRUCTIONAL AND/OR BEHAVIORAL INTERVENTIONS*@
+
+                                        <li id="cid_138" class="form-input-wide" data-type="control_head">
+                                            <div class="form-header-group  header-default">
+                                                <div class="header-text httac htvam">
+                                                    <h2 id="header_138" class="form-header" data-component="header">
+                                                        RECOMMENDED INSTRUCTIONAL AND/OR BEHAVIORAL INTERVENTIONS
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <div id="cid_139" class="form-input-wide" data-layout="full">
+                                            @Html.TextAreaFor(x => x.Conclusion.Conclusion_text, new { id = "input_139", @class = "form-textarea", name = "q139_input139", style = "width:630px;height:160px", datacomponent = "textarea", placeholder = "", required = "", arialabelledby = "label_139" })
+                                            @Html.ValidationMessageFor(x => x.Conclusion.Conclusion_text, null, new { style = "color:red" })
+                                        </div>
+                                        </li>
+                                        <div style="width: 100%;">
+                                            <input id="pre_btn3" onclick="prev_step3()" type="button" value="Previous" class="prevbut">
+                                            <input id="next_btn1" onclick="next_step4()" type="button" value="Next" style="float: right; right: 0;">
+                                        </div>
+                                        </li>
+
+                            </fieldset>
+
+                            @*IEP DEVELOPMENT TEAM*@
+                            <fieldset id="fifth">
+                                <!--    <ul class="form-section page-section" style="display:none;"> -->
+                                <li id="cid_65" class="form-input-wide" data-type="control_head">
+                                    <div class="form-header-group  header-small">
+                                        <div class="header-text httac htvam">
+                                            <h3 id="header_65" class="form-header" data-component="header">
+                                                IEP DEVELOPMENT TEAM
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div id="cid_25" class="form-input-wide jf-required" data-layout="full">
+                                    <table summary="" aria-labelledby="label_25" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix" data-dynamic="true">
+                                        <tr class="form-matrix-tr form-matrix-header-tr">
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
+                                                <label id="label_25_col_0"> S.# </label>
+                                            </th>
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                <label id="label_25_col_1"> Name </label>
+                                            </th>
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                <label id="label_25_col_1"> Team Member's Signature</label>
+                                            </th>
+
+                                            <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                                                <label id="label_25_col_1"> Position/Title </label>
+                                            </th>
+                                        </tr>
+                                        <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_25 label_25_row_0">
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+
+
+                                            <td class="form-matrix-values">
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.TextBoxFor(x => x.MedicalHistory.Measles_Age, null, new { id = "input_25_0_1", name = "q25_medicalHistory[0][1]", @Class = "form-textbox validate[Numeric, minCharLimit]", maxLength = "2", placeholder = "", type = "text", size = "10", })
+                                                @Html.ValidationMessageFor(x => x.MedicalHistory.Measles_Age, null, new { style = "color:red" })
+                                            </td>
+                                    </table>
+
+
+
+                                    <input id="pre_btn4" onclick="prev_step4()" type="button" value="Previous" class="prevbut">
+                                    <input id="submit" @*onclick="btn_submitch()"*@ name="next" type="submit" value="Submit" style="float: right; right: 0;">
+
+
+
+
+
+
+</fieldset>
+                        </div>
+                        </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function next_step1() {
+        document.getElementById("first").style.display = "none";
+        document.getElementById("second").style.display = "block";
+        document.getElementById("active2").style.color = "red";
+    }
+    function next_step2() {
+        document.getElementById("second").style.display = "none";
+        document.getElementById("third").style.display = "block";
+        document.getElementById("active3").style.color = "red";
+    }
+    function next_step3() {
+        document.getElementById("third").style.display = "none";
+        document.getElementById("fourth").style.display = "block";
+        document.getElementById("active3").style.color = "red";
+    }
+    function next_step4() {
+        document.getElementById("fourth").style.display = "none";
+        document.getElementById("fifth").style.display = "block";
+        document.getElementById("active3").style.color = "red";
+
+    }
+    // Previous Button Script
+    function prev_step1() {
+        document.getElementById("first").style.display = "block";
+        document.getElementById("second").style.display = "none";
+        document.getElementById("active1").style.color = "red";
+        document.getElementById("active2").style.color = "gray";
+    }
+    function prev_step2() {
+        document.getElementById("third").style.display = "none";
+        document.getElementById("second").style.display = "block";
+        document.getElementById("active2").style.color = "red";
+        document.getElementById("active3").style.color = "gray";
+    }
+    function prev_step3() {
+        document.getElementById("fourth").style.display = "none";
+        document.getElementById("third").style.display = "block";
+        document.getElementById("active2").style.color = "red";
+        document.getElementById("active3").style.color = "gray";
+    }
+    function prev_step4() {
+        document.getElementById("fifth").style.display = "none";
+        document.getElementById("fourth").style.display = "block";
+        document.getElementById("active2").style.color = "red";
+        document.getElementById("active3").style.color = "gray";
+    }
+
+
+</script>
+
+
